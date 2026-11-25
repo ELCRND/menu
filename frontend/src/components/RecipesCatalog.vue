@@ -202,16 +202,11 @@ function printCard() {
                             <!-- Плашка номера как на скриншоте (vless / ID) -->
                             <div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
                                 <span
-                                    class="px-2.5 py-0.5 rounded-full bg-[#151e29]/90 backdrop-blur-sm border border-[#10a37f]/45 text-[#13b890] font-mono text-xs font-semibold"
+                                    class="px-2.5 py-0.5 rounded-full bg-[#151e29]/90 backdrop-blur-sm border border-[#13b890]/45 text-[#13b890] font-mono text-[14px] font-semibold"
                                 >
                                     № {{ recipe.recipe_number }}
                                 </span>
-                                <span
-                                    v-if="recipe.variants?.length"
-                                    class="px-2 py-0.5 rounded-full bg-[#151e29]/90 backdrop-blur-sm border border-[#6366f1]/45 text-[#a5b4fc] font-mono text-[11px]"
-                                >
-                                    {{ recipe.variants.length }} кол.
-                                </span>
+
                             </div>
 
                             <!-- Кнопка избранного с плотным фоном -->
@@ -242,7 +237,7 @@ function printCard() {
                                 </span>
                                 <span
                                     v-if="recipe.variants?.[0]?.output_weight"
-                                    class="px-2 py-0.5 rounded-full text-[11px] font-mono bg-[#222e42] text-[#94a3b8] border border-[#364761]"
+                                    class="px-2 py-0.5 rounded-full text-[11px] font-mono bg-[#6366f1]/10 text-[#6366f1] border border-[#6366f1]/40"
                                 >
                                     Выход: {{ recipe.variants[0].output_weight }} г
                                 </span>
@@ -512,7 +507,7 @@ function printCard() {
                                 >
                                     <td class="border border-[#2b394e] px-3.5 py-2 print-border">{{ n.variant_note ||
                                         'Основной вариант'
-                                        }}</td>
+                                    }}</td>
                                     <td class="border border-[#2b394e] px-2 py-2 text-center font-mono print-border">
                                         <span
                                             class="px-2 py-0.5 rounded-full bg-[#222e42] text-[#94a3b8] border border-[#364761] print-tag"

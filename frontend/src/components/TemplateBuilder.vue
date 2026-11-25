@@ -278,6 +278,244 @@ function getProgressColor(actual, target, defaultBgClass) {
     return defaultBgClass
 }
 
+// Состояние модального окна создания нового шаблона
+const newTemplateModalVisible = ref(false)
+const newTemplateForm = ref({
+    name: '',
+    days_count: 14,
+    copy_from_id: null
+})
+
+function openNewTemplateModal() {
+    newTemplateForm.value = {
+        name: '',
+        days_count: 14,
+        copy_from_id: null
+    }
+    newTemplateModalVisible.value = true
+}
+
+async function createNewTemplate() {
+    if (!newTemplateForm.value.name.trim()) return
+
+    const res = await fetch('/api/menu/templates', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newTemplateForm.value)
+    })
+    const created = await res.json()
+
+    // Обновляем список шаблонов и сразу переключаемся на созданный
+    templates.value.push(created)
+    selectedTemplateId.value = created.id
+    selectedDay.value = 1
+    newTemplateModalVisible.value = false
+}
+
+// Состояние для переименования шаблона
+const renameModalVisible = ref(false)
+const renameTitle = ref('')
+
+function openRenameModal() {
+    if (!currentTemplate.value) return
+    renameTitle.value = currentTemplate.value.name
+    renameModalVisible.value = true
+}
+
+async function confirmRenameTemplate() {
+    if (!currentTemplate.value || !renameTitle.value.trim()) return
+    const id = currentTemplate.value.id
+
+    const res = await fetch(`/api/menu/templates/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: renameTitle.value.trim() })
+    })
+    const updated = await res.json()
+
+    currentTemplate.value.name = updated.name
+    renameModalVisible.value = false
+}
+
+// Состояние для подтверждения удаления шаблона
+const deleteModalVisible = ref(false)
+
+function openDeleteModal() {
+    if (!currentTemplate.value) return
+    deleteModalVisible.value = true
+}
+
+async function confirmDeleteTemplate() {
+    if (!currentTemplate.value) return
+    const idToDelete = currentTemplate.value.id
+
+    await fetch(`/api/menu/templates/${idToDelete}`, { method: 'DELETE' })
+
+    // Убираем удаленный шаблон из списка и переключаемся на первый оставшийся
+    templates.value = templates.value.filter(t => t.id !== idToDelete)
+    selectedTemplateId.value = templates.value.length ? templates.value[0].id : null
+    templateItems.value = []
+    selectedDay.value = 1
+    deleteModalVisible.value = false
+}
+
+// Состояние модального окна копирования дня
+const copyDayModalVisible = ref(false)
+const copyDayForm = ref({
+    target_diet_id: null,
+    target_days: [],
+    replace_existing: true
+})
+
+function openCopyDayModal() {
+    if (!currentTemplate.value || !currentDiet.value) return
+    copyDayForm.value = {
+        target_diet_id: currentDiet.value.id,
+        target_days: [],
+        replace_existing: true
+    }
+    copyDayModalVisible.value = true
+}
+
+// Переключатель выбора целевого дня в модальном окне
+function toggleTargetDay(day) {
+    // Не даем выбрать исходный день, если стол тот же самый
+    if (day === selectedDay.value && copyDayForm.value.target_diet_id === selectedDietId.value) {
+        return
+    }
+    const idx = copyDayForm.value.target_days.indexOf(day)
+    if (idx === -1) {
+        copyDayForm.value.target_days.push(day)
+    } else {
+        copyDayForm.value.target_days.splice(idx, 1)
+    }
+}
+
+async function confirmCopyDay() {
+    if (!copyDayForm.value.target_days.length) return
+
+    await fetch(`/api/menu/templates/${selectedTemplateId.value}/copy-day`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            source_day: selectedDay.value,
+            source_diet_id: selectedDietId.value,
+            target_days: copyDayForm.value.target_days,
+            target_diet_id: copyDayForm.value.target_diet_id,
+            replace_existing: copyDayForm.value.replace_existing
+        })
+    })
+
+    copyDayModalVisible.value = false
+
+    // Если скопировали на другой стол в этом же дне — сразу обновим экран
+    if (copyDayForm.value.target_days.includes(selectedDay.value)) {
+        await loadTemplateItems()
+    }
+}
+
+// Состояние модального окна управления приемами пищи
+const mealTimesModalVisible = ref(false)
+const newMealTimeName = ref('')
+const mealTimesError = ref('')
+
+function openMealTimesModal() {
+    newMealTimeName.value = ''
+    mealTimesError.value = ''
+    mealTimesModalVisible.value = true
+}
+
+async function addMealTime() {
+    if (!newMealTimeName.value.trim()) return
+    mealTimesError.value = ''
+
+    const res = await fetch('/api/menu/meal-times', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: newMealTimeName.value.trim() })
+    })
+    const data = await res.json()
+
+    if (!res.ok) {
+        mealTimesError.value = data.error || 'Ошибка добавления'
+        return
+    }
+
+    mealTimes.value.push(data)
+    newMealTimeName.value = ''
+}
+
+async function renameMealTime(meal, newName) {
+    const trimmed = newName.trim()
+    if (!trimmed || trimmed === meal.name) return
+    mealTimesError.value = ''
+
+    const res = await fetch(`/api/menu/meal-times/${meal.id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: trimmed })
+    })
+    const data = await res.json()
+
+    if (!res.ok) {
+        mealTimesError.value = data.error || 'Ошибка переименования'
+        return
+    }
+
+    meal.name = data.name
+}
+
+async function moveMealTime(index, direction) {
+    const targetIndex = index + direction
+    if (targetIndex < 0 || targetIndex >= mealTimes.value.length) return
+
+    const list = [...mealTimes.value]
+    const temp = list[index]
+    list[index] = list[targetIndex]
+    list[targetIndex] = temp
+
+    mealTimes.value = list
+    const orderedIds = list.map(m => m.id)
+
+    await fetch('/api/menu/meal-times/reorder', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ orderedIds })
+    })
+}
+
+async function removeMealTime(mealId) {
+    mealTimesError.value = ''
+    const res = await fetch(`/api/menu/meal-times/${mealId}`, { method: 'DELETE' })
+    const data = await res.json()
+
+    if (!res.ok) {
+        mealTimesError.value = data.error || 'Не удалось удалить'
+        return
+    }
+
+    mealTimes.value = mealTimes.value.filter(m => m.id !== mealId)
+}
+
+
+const clearDayModalVisible = ref(false)
+
+function openClearDayModal() {
+    if (!dietItems.value.length) return
+    clearDayModalVisible.value = true
+}
+
+async function confirmClearDay() {
+    if (!selectedTemplateId.value || !selectedDietId.value) return
+
+    await fetch(
+        `/api/menu/templates/${selectedTemplateId.value}/days/${selectedDay.value}?diet_id=${selectedDietId.value}`,
+        { method: 'DELETE' }
+    )
+
+    clearDayModalVisible.value = false
+    await loadTemplateItems()
+}
 
 </script>
 
@@ -285,23 +523,55 @@ function getProgressColor(actual, target, defaultBgClass) {
     <div class="max-w-7xl mx-auto p-4 sm:p-6">
         <!-- Верхняя панель управления шаблоном и диетой -->
         <div class="bg-[#1c2636] border border-[#2b394e] rounded-xl p-4 mb-5 shadow-lg">
-            <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+
+
+            <div class="flex flex-wrap items-center  gap-4 mb-4">
                 <div class="flex flex-wrap items-center gap-3">
-                    <Select
-                        v-model="selectedTemplateId"
-                        :options="templates"
-                        optionLabel="name"
-                        optionValue="id"
-                        placeholder="Выберите шаблон меню"
-                        class="w-72 xui-select"
-                    />
+
+                    <div
+                        class="text-center h-14 py-2 px-2.5 border flex gap-2 items-center border-[#2b394e] rounded-lg">
+
+                        <Select
+                            v-model="selectedTemplateId"
+                            :options="templates"
+                            optionLabel="name"
+                            optionValue="id"
+                            placeholder="Выберите шаблон меню"
+                            class="w-72 h-full mr-4 xui-select"
+                        />
+
+                        <Button
+                            icon="pi pi-plus"
+                            title="Создать новый шаблон меню (7 или 14 дней)"
+                            class="xui-btn xui-btn-slate !px-3"
+                            @click="openNewTemplateModal"
+                        />
+
+                        <Button
+                            v-if="currentTemplate"
+                            icon="pi pi-pencil"
+                            title="Переименовать текущий шаблон"
+                            class="xui-btn xui-btn-slate !px-2.5"
+                            @click="openRenameModal"
+                        />
+
+                        <Button
+                            v-if="currentTemplate"
+                            icon="pi pi-trash"
+                            title="Удалить текущий шаблон"
+                            class="xui-btn xui-btn-danger !px-2.5"
+                            @click="openDeleteModal"
+                        />
+
+                    </div>
+
 
                     <Select
                         v-model="selectedDietId"
                         :options="diets"
                         optionValue="id"
                         placeholder="Выберите стол"
-                        class="w-64 xui-select"
+                        class="w-64 h-9 xui-select"
                     >
                         <template #value="{ value }">
                             <span
@@ -318,27 +588,59 @@ function getProgressColor(actual, target, defaultBgClass) {
                             </div>
                         </template>
                     </Select>
+
                 </div>
 
-                <!-- Переключатель дней цикла -->
-                <div
-                    v-if="currentTemplate"
-                    class="flex items-center gap-1.5 flex-wrap"
-                >
-                    <span class="text-xs text-[#8a99ad] mr-1">День цикла:</span>
-                    <button
-                        v-for="day in currentTemplate.days_count"
-                        :key="day"
-                        type="button"
-                        @click="selectedDay = day"
-                        class="w-8 h-8 rounded-lg font-mono text-xs font-semibold border transition-all cursor-pointer"
-                        :class="selectedDay === day
-                            ? 'bg-[#10a37f] border-[#13b890] text-white shadow-sm'
-                            : 'bg-[#151e29] border-[#2b394e] text-[#94a3b8] hover:border-[#10a37f]'"
-                    >
-                        {{ day }}
-                    </button>
+                <div class="min-w-full">
+                    <div
+                        class="w-fit text-center py-2 px-2.5 border flex flex-wrap gap-2 items-center border-[#2b394e] rounded-lg">
+                        <!-- Переключатель дней цикла -->
+                        <div
+                            v-if="currentTemplate"
+                            class="flex items-center gap-1.5 flex-wrap"
+                        >
+                            <span class="text-xs text-[#8a99ad] mr-1">День цикла:</span>
+                            <button
+                                v-for="day in currentTemplate.days_count"
+                                :key="day"
+                                type="button"
+                                @click="selectedDay = day"
+                                class="w-8 h-8 rounded-lg font-mono text-xs font-semibold border transition-all cursor-pointer"
+                                :class="selectedDay === day
+                                    ? 'bg-[#10a37f] border-[#13b890] text-white shadow-sm'
+                                    : 'bg-[#151e29] border-[#2b394e] text-[#94a3b8] hover:border-[#10a37f]'"
+                            >
+                                {{ day }}
+                            </button>
+                        </div>
+
+                        <Button
+                            v-if="dietItems.length"
+                            label="Копировать день"
+                            icon="pi pi-copy"
+                            class="xui-btn xui-btn-slate !py-1.5 !px-3 !text-xs ml-2"
+                            @click="openCopyDayModal"
+                        />
+
+                        <Button
+                            v-if="dietItems.length"
+                            label="Очистить день"
+                            icon="pi pi-eraser"
+                            class="xui-btn xui-btn-danger !py-1.5 !px-3 !text-xs"
+                            @click="openClearDayModal"
+                        />
+                    </div>
                 </div>
+
+                <Button
+                    label="Приемы пищи"
+                    icon="pi pi-sliders-h"
+                    class="xui-btn xui-btn-slate h-9 !py-1.5 !px-3 !text-xs"
+                    @click="openMealTimesModal"
+                />
+
+
+
             </div>
 
             <!-- Сводная панель КБЖУ за день с редактируемыми нормами -->
@@ -771,6 +1073,359 @@ function getProgressColor(actual, target, defaultBgClass) {
                 </div>
             </div>
         </Dialog>
+
+        <!-- Модальное окно создания нового шаблона меню -->
+        <Dialog
+            v-model:visible="newTemplateModalVisible"
+            modal
+            header="Новый шаблон типового меню"
+            class="w-11/12 max-w-md xui-dialog"
+            contentClass="!bg-[#1c2636] !text-[#e2e8f0]"
+        >
+            <div class="space-y-4 pt-2">
+                <div>
+                    <label class="block text-[11px] text-[#8a99ad] mb-1">Название меню:</label>
+                    <InputText
+                        v-model="newTemplateForm.name"
+                        placeholder="Например: 14-дневное весенне-летнее меню"
+                        class="w-full xui-input"
+                    />
+                </div>
+
+                <div>
+                    <label class="block text-[11px] text-[#8a99ad] mb-1">Цикличность (количество дней):</label>
+                    <Select
+                        v-model="newTemplateForm.days_count"
+                        :options="[
+                            { label: '7 дней (недельное)', value: 7 },
+                            { label: '10 дней (декадное)', value: 10 },
+                            { label: '14 дней (двухнедельное)', value: 14 }
+                        ]"
+                        optionLabel="label"
+                        optionValue="value"
+                        class="w-full xui-select"
+                    />
+                </div>
+
+                <div>
+                    <label class="block text-[11px] text-[#8a99ad] mb-1">Взять за основу (необязательно):</label>
+                    <Select
+                        v-model="newTemplateForm.copy_from_id"
+                        :options="templates"
+                        optionLabel="name"
+                        optionValue="id"
+                        placeholder="Пустое меню"
+                        showClear
+                        class="w-full xui-select"
+                    />
+                </div>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <Button
+                        label="Отмена"
+                        class="xui-btn xui-btn-slate"
+                        @click="newTemplateModalVisible = false"
+                    />
+                    <Button
+                        label="Создать шаблон"
+                        icon="pi pi-check"
+                        :disabled="!newTemplateForm.name.trim()"
+                        class="xui-btn xui-btn-teal"
+                        @click="createNewTemplate"
+                    />
+                </div>
+            </div>
+        </Dialog>
+
+        <!-- Модальное окно переименования шаблона -->
+        <Dialog
+            v-model:visible="renameModalVisible"
+            modal
+            header="Переименовать шаблон меню"
+            class="w-11/12 max-w-md xui-dialog"
+            contentClass="!bg-[#1c2636] !text-[#e2e8f0]"
+        >
+            <div class="space-y-4 pt-2">
+                <div>
+                    <label class="block text-[11px] text-[#8a99ad] mb-1">Новое название:</label>
+                    <InputText
+                        v-model="renameTitle"
+                        @keyup.enter="confirmRenameTemplate"
+                        class="w-full xui-input"
+                    />
+                </div>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <Button
+                        label="Отмена"
+                        class="xui-btn xui-btn-slate"
+                        @click="renameModalVisible = false"
+                    />
+                    <Button
+                        label="Сохранить"
+                        icon="pi pi-check"
+                        :disabled="!renameTitle.trim()"
+                        class="xui-btn xui-btn-teal"
+                        @click="confirmRenameTemplate"
+                    />
+                </div>
+            </div>
+        </Dialog>
+
+        <!-- Модальное окно подтверждения удаления шаблона -->
+        <Dialog
+            v-model:visible="deleteModalVisible"
+            modal
+            header="Подтверждение удаления"
+            class="w-11/12 max-w-md xui-dialog"
+            contentClass="!bg-[#1c2636] !text-[#e2e8f0]"
+        >
+            <div class="space-y-4 pt-2 text-xs leading-relaxed">
+                <div
+                    class="p-3 rounded-lg bg-[#ef4444]/10 border border-[#ef4444]/30 text-[#fca5a5] flex items-start gap-2.5">
+                    <i class="pi pi-exclamation-triangle text-base text-[#ef4444] mt-0.5"></i>
+                    <div>
+                        Вы действительно хотите удалить шаблон
+                        <strong class="text-white">«{{ currentTemplate?.name }}»</strong>?
+                        <div class="mt-1 text-[#cbd5e1]">
+                            Все назначенные блюда во всех днях этого шаблона будут удалены безвозвратно. Уже
+                            сформированные
+                            ежедневные ведомости сохранятся.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <Button
+                        label="Отмена"
+                        class="xui-btn xui-btn-slate"
+                        @click="deleteModalVisible = false"
+                    />
+                    <Button
+                        label="Да, удалить шаблон"
+                        icon="pi pi-trash"
+                        class="xui-btn xui-btn-danger"
+                        @click="confirmDeleteTemplate"
+                    />
+                </div>
+            </div>
+        </Dialog>
+
+
+        <!-- Модальное окно копирования дня -->
+        <Dialog
+            v-model:visible="copyDayModalVisible"
+            modal
+            header="Копирование рациона дня"
+            class="w-11/12 max-w-md xui-dialog"
+            contentClass="!bg-[#1c2636] !text-[#e2e8f0]"
+        >
+            <div
+                v-if="currentTemplate && currentDiet"
+                class="space-y-4 pt-2 text-xs"
+            >
+                <div class="p-3 rounded-lg bg-[#151e29] border border-[#2b394e] text-[#cbd5e1]">
+                    Источник: <strong class="text-white">День {{ selectedDay }}</strong> · Стол
+                    <strong class="text-[#13b890]">{{ currentDiet.code }}</strong>
+                    ({{ dietItems.length }} блюд)
+                </div>
+
+                <div>
+                    <label class="block text-[11px] text-[#8a99ad] mb-1">На какой диетический стол копировать:</label>
+                    <Select
+                        v-model="copyDayForm.target_diet_id"
+                        :options="diets"
+                        optionValue="id"
+                        @change="copyDayForm.target_days = []"
+                        class="w-full xui-select"
+                    >
+                        <template #option="{ option }">
+                            <span class="font-mono font-bold text-[#13b890]">{{ option.code }}</span>
+                            <span class="ml-2 text-xs text-[#94a3b8]">{{ option.name }}</span>
+                        </template>
+                        <template #value="{ value }">
+                            <span v-if="diets.find(d => d.id === value)">
+                                {{diets.find(d => d.id === value).code}} — {{diets.find(d => d.id === value).name}}
+                            </span>
+                        </template>
+                    </Select>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] text-[#8a99ad] mb-1.5">Выберите целевые дни цикла:</label>
+                    <div class="flex flex-wrap gap-1.5">
+                        <button
+                            v-for="day in currentTemplate.days_count"
+                            :key="day"
+                            type="button"
+                            :disabled="day === selectedDay && copyDayForm.target_diet_id === selectedDietId"
+                            @click="toggleTargetDay(day)"
+                            class="w-9 h-9 rounded-lg font-mono text-xs font-semibold border transition-all cursor-pointer disabled:opacity-25 disabled:cursor-not-allowed"
+                            :class="copyDayForm.target_days.includes(day)
+                                ? 'bg-[#10a37f] border-[#13b890] text-white'
+                                : 'bg-[#151e29] border-[#2b394e] text-[#94a3b8] hover:border-[#10a37f]'"
+                        >
+                            {{ day }}
+                        </button>
+                    </div>
+                </div>
+
+                <label class="flex items-center gap-2 cursor-pointer text-[#cbd5e1] pt-1">
+                    <input
+                        type="checkbox"
+                        v-model="copyDayForm.replace_existing"
+                        class="accent-[#10a37f] w-4 h-4 rounded"
+                    />
+                    <span>Очистить существующие блюда в выбранных днях перед копированием</span>
+                </label>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <Button
+                        label="Отмена"
+                        class="xui-btn xui-btn-slate"
+                        @click="copyDayModalVisible = false"
+                    />
+                    <Button
+                        label="Скопировать"
+                        icon="pi pi-copy"
+                        :disabled="!copyDayForm.target_days.length"
+                        class="xui-btn xui-btn-teal"
+                        @click="confirmCopyDay"
+                    />
+                </div>
+            </div>
+        </Dialog>
+
+        <!-- Модальное окно настройки приемов пищи -->
+        <Dialog
+            v-model:visible="mealTimesModalVisible"
+            modal
+            header="Настройка приемов пищи"
+            class="w-11/12 max-w-lg xui-dialog"
+            contentClass="!bg-[#1c2636] !text-[#e2e8f0]"
+        >
+            <div class="space-y-4 pt-2 text-xs">
+                <div
+                    v-if="mealTimesError"
+                    class="p-2.5 rounded-lg bg-[#ef4444]/15 border border-[#ef4444]/40 text-[#fca5a5]"
+                >
+                    {{ mealTimesError }}
+                </div>
+
+                <!-- Добавление нового приема пищи -->
+                <div class="flex items-center gap-2">
+                    <InputText
+                        v-model="newMealTimeName"
+                        placeholder="Например: Паужин или Сонник..."
+                        @keyup.enter="addMealTime"
+                        class="flex-1 xui-input"
+                    />
+                    <Button
+                        label="Добавить"
+                        icon="pi pi-plus"
+                        :disabled="!newMealTimeName.trim()"
+                        class="xui-btn xui-btn-teal"
+                        @click="addMealTime"
+                    />
+                </div>
+
+                <!-- Список существующих приемов пищи -->
+                <div class="space-y-2 max-h-72 overflow-y-auto pr-1">
+                    <div
+                        v-for="(meal, idx) in mealTimes"
+                        :key="meal.id"
+                        class="p-2 rounded-lg bg-[#151e29] border border-[#2b394e] flex items-center gap-2"
+                    >
+                        <!-- Стрелки сортировки -->
+                        <div class="flex flex-col gap-0.5 shrink-0">
+                            <button
+                                type="button"
+                                :disabled="idx === 0"
+                                @click="moveMealTime(idx, -1)"
+                                class="w-5 h-4 rounded bg-[#1c2636] hover:bg-[#222e42] disabled:opacity-25 text-[#8a99ad] hover:text-white flex items-center justify-center cursor-pointer disabled:cursor-default"
+                            >
+                                <i class="pi pi-chevron-up text-[9px]"></i>
+                            </button>
+                            <button
+                                type="button"
+                                :disabled="idx === mealTimes.length - 1"
+                                @click="moveMealTime(idx, 1)"
+                                class="w-5 h-4 rounded bg-[#1c2636] hover:bg-[#222e42] disabled:opacity-25 text-[#8a99ad] hover:text-white flex items-center justify-center cursor-pointer disabled:cursor-default"
+                            >
+                                <i class="pi pi-chevron-down text-[9px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Поле редактирования названия (сохраняется по Enter или потере фокуса) -->
+                        <input
+                            type="text"
+                            :value="meal.name"
+                            @blur="renameMealTime(meal, $event.target.value)"
+                            @keyup.enter="$event.target.blur()"
+                            class="flex-1 h-8 px-2.5 rounded bg-[#1c2636] border border-[#2b394e] focus:border-[#10a37f] text-white text-xs outline-none"
+                        />
+
+                        <!-- Кнопка удаления -->
+                        <button
+                            type="button"
+                            @click="removeMealTime(meal.id)"
+                            title="Удалить прием пищи"
+                            class="w-8 h-8 rounded-lg bg-[#222e42] hover:bg-[#ef4444]/20 text-[#8a99ad] hover:text-[#f87171] border border-[#364761] flex items-center justify-center shrink-0 cursor-pointer transition-colors"
+                        >
+                            <i class="pi pi-trash text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex justify-end pt-2 border-t border-[#2b394e]">
+                    <Button
+                        label="Готово"
+                        class="xui-btn xui-btn-slate"
+                        @click="mealTimesModalVisible = false"
+                    />
+                </div>
+            </div>
+        </Dialog>
+
+        <!-- Модальное окно подтверждения очистки дня -->
+        <Dialog
+            v-model:visible="clearDayModalVisible"
+            modal
+            header="Очистка рациона дня"
+            class="w-11/12 max-w-md xui-dialog"
+            contentClass="!bg-[#1c2636] !text-[#e2e8f0]"
+        >
+            <div
+                v-if="currentDiet"
+                class="space-y-4 pt-2 text-xs leading-relaxed"
+            >
+                <div
+                    class="p-3 rounded-lg bg-[#ef4444]/10 border border-[#ef4444]/30 text-[#fca5a5] flex items-start gap-2.5">
+                    <i class="pi pi-exclamation-triangle text-base text-[#ef4444] mt-0.5"></i>
+                    <div>
+                        Удалить все блюда (<strong class="text-white">{{ dietItems.length }} шт.</strong>) из
+                        <strong class="text-white">Дня {{ selectedDay }}</strong> для стола
+                        <strong class="text-[#13b890]">{{ currentDiet.code }}</strong>?
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-2 pt-2">
+                    <Button
+                        label="Отмена"
+                        class="xui-btn xui-btn-slate"
+                        @click="clearDayModalVisible = false"
+                    />
+                    <Button
+                        label="Да, очистить день"
+                        icon="pi pi-trash"
+                        class="xui-btn xui-btn-danger"
+                        @click="confirmClearDay"
+                    />
+                </div>
+            </div>
+        </Dialog>
+
+
 
     </div>
 </template>

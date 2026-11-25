@@ -190,6 +190,27 @@ function printReport() {
     window.print()
 }
 
+// Возвращает количество строк для объединения или 0, если ячейку нужно скрыть
+const getMealRowspan = (list, index) => {
+    const currentMeal = list[index]?.meal_name;
+
+    // Если значение совпадает с предыдущим — ячейка уже объединена сверху, скрываем её
+    if (index > 0 && list[index - 1]?.meal_name === currentMeal) {
+        return 0;
+    }
+
+    // Считаем, сколько строк подряд идет это же блюдо/прием пищи
+    let count = 1;
+    for (let i = index + 1; i < list.length; i++) {
+        if (list[i]?.meal_name === currentMeal) {
+            count++;
+        } else {
+            break;
+        }
+    }
+    return count;
+};
+
 </script>
 
 <template>
@@ -289,10 +310,7 @@ function printReport() {
 
                     <div class="grid grid-cols-2 gap-2 text-[11px]">
                         <div>
-                            <label
-                                for="regular-input"
-                                class="block text-[#8a99ad] mb-1"
-                            >Общий:</label>
+                            <label class="block text-[#8a99ad] mb-1">Общий:</label>
                             <InputNumber
                                 id="regular-input"
                                 v-model="row.regular"
@@ -314,10 +332,7 @@ function printReport() {
                         </div>
 
                         <div>
-                            <label
-                                for="pureed-input"
-                                class="block text-[#8a99ad] mb-1"
-                            >Протертый:</label>
+                            <label class="block text-[#8a99ad] mb-1">Протертый:</label>
                             <InputNumber
                                 id="pureed-input"
                                 v-model="row.pureed"
@@ -547,13 +562,19 @@ function printReport() {
                             <th class="border border-[#2b394e] px-3 py-2 text-center w-24 print-border">Итого, шт</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="border border-[#2b394e] border-collapse">
                         <tr
                             v-for="(row, idx) in distributionList"
                             :key="idx"
-                            class="hover:bg-[#151e29]"
+                            class=" hover:bg-[#151e29]"
                         >
-                            <td class="border border-[#2b394e] px-3 py-2 print-border">{{ row.meal_name }}</td>
+                            <td
+                                v-if="getMealRowspan(distributionList, idx) > 0"
+                                :rowspan="getMealRowspan(distributionList, idx)"
+                                class="border border-[#2b394e] px-3 py-2 align-top font-semibold print-border"
+                            >
+                                {{ row.meal_name }}
+                            </td>
                             <td class="border border-[#2b394e] px-3 py-2 font-medium print-border">
                                 №{{ row.recipe_number }} {{ row.recipe_title }}
                             </td>

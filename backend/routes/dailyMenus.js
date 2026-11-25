@@ -43,6 +43,7 @@ router.post("/generate", (req, res) => {
           `
           SELECT * FROM menu_template_items 
           WHERE template_id = ? AND day_number = ? AND diet_id IN (${placeholders})
+          ORDER BY sort_order, id
         `,
         )
         .all(template_id, day_number, ...activeDietIds);
@@ -281,7 +282,7 @@ router.get("/:date/distribution", (req, res) => {
       JOIN daily_headcount dh ON dh.daily_menu_id = dmi.daily_menu_id AND dh.diet_id = dmi.diet_id
       WHERE dmi.daily_menu_id = ?
       GROUP BY mt.id, r.id, d.id, dmi.id
-      ORDER BY mt.sort_order, r.title, d.id
+      ORDER BY mt.sort_order, d.id, dmi.id
     `,
     )
     .all(menu.id);
