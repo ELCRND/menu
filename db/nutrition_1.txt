@@ -2434,8 +2434,8 @@
         },
         {
             "recipe_number": 30,
-            "dish_name": "Волованы с курицей",
-            "variant_note": null,
+            "dish_name": "Волованы",
+            "variant_note": "с курицей",
             "output_weight": 80,
             "proteins_total": 9.29,
             "proteins_animal": 7.01,
@@ -2466,8 +2466,8 @@
         },
         {
             "recipe_number": 31,
-            "dish_name": "Волованы с окороком",
-            "variant_note": null,
+            "dish_name": "Волованы",
+            "variant_note": "с окороком",
             "output_weight": 80,
             "proteins_total": 6.62,
             "proteins_animal": 4.34,

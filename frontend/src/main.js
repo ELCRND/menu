@@ -12,6 +12,7 @@ import router from "./router";
 const app = createApp(App);
 
 app.use(PrimeVue, {
+  license: import.meta.env.VITE_PRIMEUI_LICENSE,
   theme: {
     preset: Aura,
   },

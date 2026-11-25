@@ -1,0 +1,4180 @@
+{
+    "recipes": [
+        {
+            "recipe_number": 1,
+            "section": "Бутерброды",
+            "title": "Бутерброды с маслом",
+            "technology": "Хлеб нарезают ломтиками толщиной 1–1,5 см. На него кладут тонкие кусочки масла. Масло нарезают тонкими кусочками различной формы с таким расчетом, чтобы они покрывали большую часть ломтика хлеба.",
+            "quality_requirements": "Внешний вид – бутерброды круглой или прямоугольной формы, равномерно покрытые сливочным маслом. Цвет, вкус и запах – свойственные данному блюду. Консистенция – масло сливочное однородное, эластичное, хлеб пористый, не липкий и не влажный на ощупь, хорошо пропечен.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Масло сливочное или шоколадное, или фруктовое, или медовое, или килечное №599, или селедочное №599, или сырное №600, или зеленое №599",
+                            "gross_weight": "20",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 45,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Масло сливочное или шоколадное, или фруктовое, или медовое, или килечное №599, или селедочное №599, или сырное №600, или зеленое №599",
+                            "gross_weight": "15",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 40,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Масло сливочное или шоколадное, или фруктовое, или медовое, или килечное №599, или селедочное №599, или сырное №600, или зеленое №599",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 2,
+            "section": "Бутерброды",
+            "title": "Бутерброды с сыром",
+            "technology": "Хлеб нарезают ломтиками толщиной 1–1,5 см, смазывают маслом, а сверху кладут 1–2 кусочка сыра. Сыр режут на большие куски прямоугольной или треугольной формы, очищают от покрытия и нарезают на порционные кусочки толщиной не более 1,5–2 мм.",
+            "quality_requirements": "Внешний вид – бутерброды овальной или прямоугольной формы, покрытые сыром; можно оформить веточкой петрушки. Цвет, вкус и запах – свойственные данному виду сыра и масла. Консистенция – сыр нежный, однородный, пластичный.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 65,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр украинский, или российский, или эстонский",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр голландский, или швейцарский, или чеддер",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский",
+                            "gross_weight": "28",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр московский, или ярославский, или степной",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр костромской",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 55,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр украинский, или российский, или эстонский",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр голландский, или швейцарский, или чеддер",
+                            "gross_weight": "22",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский",
+                            "gross_weight": "23",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр московский, или ярославский, или степной",
+                            "gross_weight": "21.5",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр костромской",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр украинский, или российский, или эстонский",
+                            "gross_weight": "16",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр голландский, или швейцарский, или чеддер",
+                            "gross_weight": "16.5",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский",
+                            "gross_weight": "17",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр московский, или ярославский, или степной",
+                            "gross_weight": "16",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр костромской",
+                            "gross_weight": "15.5",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 3,
+            "section": "Бутерброды",
+            "title": "Бутерброды с отварными мясными продуктами",
+            "technology": "На ломтики хлеба толщиной 1–1,5 см укладывают отварные мясные продукты, нарезанные тонкими кусочками, оформляют зеленью петрушки.",
+            "quality_requirements": "Внешний вид – форма овальная или прямоугольная, поверхность мясных продуктов не заветрена, не допускается изменение цвета. Цвет, вкус и запах – свойственные данному виду мясопродуктов, без посторонних привкуса и запаха.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 70,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина",
+                            "gross_weight": "88",
+                            "net_weight": 65,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина",
+                            "gross_weight": "79",
+                            "net_weight": 67,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина",
+                            "gross_weight": "88",
+                            "net_weight": 63,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык говяжий",
+                            "gross_weight": "67",
+                            "net_weight": 67,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык бараний",
+                            "gross_weight": "76",
+                            "net_weight": 76,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык свиной",
+                            "gross_weight": "68",
+                            "net_weight": 68,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масса отварных мясопродуктов",
+                            "gross_weight": "-",
+                            "net_weight": 40,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 60,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина",
+                            "gross_weight": "65",
+                            "net_weight": 48,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина",
+                            "gross_weight": "59",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина",
+                            "gross_weight": "66",
+                            "net_weight": 47,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык говяжий",
+                            "gross_weight": "51",
+                            "net_weight": 51,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык бараний",
+                            "gross_weight": "57",
+                            "net_weight": 57,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык свиной",
+                            "gross_weight": "51",
+                            "net_weight": 51,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Масса отварных мясопродуктов",
+                            "gross_weight": "-",
+                            "net_weight": 30,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина",
+                            "gross_weight": "43",
+                            "net_weight": 32,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина",
+                            "gross_weight": "39",
+                            "net_weight": 33,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина",
+                            "gross_weight": "43",
+                            "net_weight": 31,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык говяжий",
+                            "gross_weight": "34",
+                            "net_weight": 34,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык бараний",
+                            "gross_weight": "38",
+                            "net_weight": 38,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Язык свиной",
+                            "gross_weight": "34",
+                            "net_weight": 34,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Масса отварных мясопродуктов",
+                            "gross_weight": "-",
+                            "net_weight": 20,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 4,
+            "section": "Бутерброды",
+            "title": "Бутерброды с жареными мясными продуктами",
+            "technology": "На ломтики хлеба толщиной 1–1,5 см укладывают жареные мясные продукты, нарезанные тонкими кусочками, оформляют зеленью петрушки.",
+            "quality_requirements": "Внешний вид – форма овальная или прямоугольная, поверхность мясных продуктов не заветрена, не допускается изменение цвета. Цвет, вкус и запах – свойственные данному продукту, характерные для жареного мяса, без посторонних привкуса и запаха.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 70,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина",
+                            "gross_weight": "84",
+                            "net_weight": 62,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина",
+                            "gross_weight": "69",
+                            "net_weight": 59,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина",
+                            "gross_weight": "88",
+                            "net_weight": 63,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Телятина",
+                            "gross_weight": "95",
+                            "net_weight": 63,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Печень говяжья",
+                            "gross_weight": "71",
+                            "net_weight": 59,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Печень свиная либо баранья",
+                            "gross_weight": "67",
+                            "net_weight": 59,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Жир животный топленый пищевой",
+                            "gross_weight": "1.6",
+                            "net_weight": 1.6,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Масса жареных мясопродуктов",
+                            "gross_weight": "-",
+                            "net_weight": 40,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 60,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина",
+                            "gross_weight": "63",
+                            "net_weight": 46,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина",
+                            "gross_weight": "52",
+                            "net_weight": 44,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина",
+                            "gross_weight": "67",
+                            "net_weight": 48,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Телятина",
+                            "gross_weight": "73",
+                            "net_weight": 48,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Печень говяжья",
+                            "gross_weight": "53",
+                            "net_weight": 44,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Печень свиная либо баранья",
+                            "gross_weight": "50",
+                            "net_weight": 44,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Жир животный топленый пищевой",
+                            "gross_weight": "1.2",
+                            "net_weight": 1.2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Масса жареных мясопродуктов",
+                            "gross_weight": "-",
+                            "net_weight": 30,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина",
+                            "gross_weight": "42",
+                            "net_weight": 31,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина",
+                            "gross_weight": "34",
+                            "net_weight": 29,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина",
+                            "gross_weight": "45",
+                            "net_weight": 32,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Телятина",
+                            "gross_weight": "48",
+                            "net_weight": 32,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Печень говяжья",
+                            "gross_weight": "35",
+                            "net_weight": 29,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Печень свиная либо баранья",
+                            "gross_weight": "33",
+                            "net_weight": 29,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Жир животный топленый пищевой",
+                            "gross_weight": "0.8",
+                            "net_weight": 0.8,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Масса жареных мясопродуктов",
+                            "gross_weight": "-",
+                            "net_weight": 20,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 5,
+            "section": "Бутерброды",
+            "title": "Бутерброды с паштетом и яйцом",
+            "technology": "Паштет нарезают кусочками различной формы, укладывают на хлеб толщиной 1–1,5 см и оформляют сливочным маслом. Сбоку кладут кружочки яйца.",
+            "quality_requirements": "Внешний вид – бутерброд овальной или прямоугольной формы, равномерно покрыт паштетом и украшен сливочным маслом, яйцом и зеленью. Вкус и запах – приятные, свойственные печени, без посторонних привкуса и запаха. Цвет – паштет светло-коричневый. Консистенция – однородная, мажущаяся.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 70,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Паштет из печени №160",
+                            "gross_weight": "-",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Яйцо",
+                            "gross_weight": "1/4 шт.",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 65,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Паштет из печени №160",
+                            "gross_weight": "-",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Яйцо",
+                            "gross_weight": "1/8 шт.",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 6,
+            "section": "Бутерброды",
+            "title": "Бутерброды с мясными гастрономическими продуктами",
+            "technology": "На ломтик хлеба толщиной 1–1,5 см укладывают мясные гастрономические продукты, нарезанные тонкими кусочками. Бутерброды с вареной колбасой можно отпускать с маслом (10; 5; 5 г по I, II, III вариантам), соответственно увеличив выход.",
+            "quality_requirements": "Внешний вид – на ломтик хлеба овальной или прямоугольной формы уложены мясные гастрономические продукты. Вкус и запах – приятные, свойственные соответствующему виду изделия, вкус в меру соленый, без посторонних привкуса и запаха. Цвет – свойственный соответствующим мясопродуктам. Консистенция – хлеб мягкий, пористый; гастрономические продукты сочные, упругие.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 70,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса вареная (любительская, столичная, отдельная, чайная и др.)",
+                            "gross_weight": "41",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса полукопченая или варено-копченая (полтавская, краковская, киевская, украинская, свиная и др.)",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса сырокопченая (свиная, сервелат, московская, особая и др.)",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок сырокопченый (со шкурой и костями), сибирский, используемый в сыром виде",
+                            "gross_weight": "48",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок копчено-вареный и вареный (со шкурой и костями), тамбовский, воронежский",
+                            "gross_weight": "53",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Рулет копчено-вареный (со шкурой и костями)",
+                            "gross_weight": "45",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Карбонат, или буженина",
+                            "gross_weight": "41",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Ветчина в форме",
+                            "gross_weight": "41",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "50",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в вареном виде (без шкуры и костей)",
+                            "gross_weight": "53",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "51",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в вареном виде (без шкуры и костей)",
+                            "gross_weight": "54",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Шпик",
+                            "gross_weight": "42",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 60,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса вареная (любительская, столичная, отдельная, чайная и др.)",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса полукопченая или варено-копченая (полтавская, краковская, киевская, украинская, свиная и др.)",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса сырокопченая (свиная, сервелат, московская, особая и др.)",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок сырокопченый (со шкурой и костями), сибирский, используемый в сыром виде",
+                            "gross_weight": "36",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок копчено-вареный и вареный (со шкурой и костями), тамбовский, воронежский",
+                            "gross_weight": "39",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Рулет копчено-вареный (со шкурой и костями)",
+                            "gross_weight": "34",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Карбонат, или буженина",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Ветчина в форме",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "38",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в вареном виде (без шкуры и костей)",
+                            "gross_weight": "39",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "38",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в вареном виде (без шкуры и костей)",
+                            "gross_weight": "40",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Шпик",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса вареная (любительская, столичная, отдельная, чайная и др.)",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса полукопченая или варено-копченая (полтавская, краковская, киевская, украинская, свиная и др.)",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса сырокопченая (свиная, сервелат, московская, особая и др.)",
+                            "gross_weight": "20",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок сырокопченый (со шкурой и костями), сибирский, используемый в сыром виде",
+                            "gross_weight": "24",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок копчено-вареный и вареный (со шкурой и костями), тамбовский, воронежский",
+                            "gross_weight": "26",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Рулет копчено-вареный (со шкурой и костями)",
+                            "gross_weight": "23",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Карбонат, или буженина",
+                            "gross_weight": "20",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Ветчина в форме",
+                            "gross_weight": "20",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "25",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в вареном виде (без шкуры и костей)",
+                            "gross_weight": "26",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "26",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в вареном виде (без шкуры и костей)",
+                            "gross_weight": "27",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Шпик",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 7,
+            "section": "Бутерброды",
+            "title": "Бутерброды с рыбными гастрономическими продуктами",
+            "technology": "На ломтик хлеба толщиной 1–1,5 см кладут рыбные гастрономические продукты, нарезанные тонкими кусочками. Бутерброды с солеными рыбными продуктами можно оформить маслом сливочным и веточкой зелени, соответственно увеличив выход.",
+            "quality_requirements": "Внешний вид – бутерброды овальной или прямоугольной формы с рыбным гастрономическим продуктом. Оформлены веточкой зелени. Вкус и запах – солоноватый, с выраженным рыбным привкусом, без посторонних привкуса и запаха. Консистенция – рыба плотная, сочная.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 60,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Севрюга горячего копчения",
+                            "gross_weight": "42",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Осетр горячего копчения",
+                            "gross_weight": "40",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Кета либо чавыча соленые",
+                            "gross_weight": "46",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Горбуша соленая",
+                            "gross_weight": "43",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Лосось каспийский",
+                            "gross_weight": "46",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Балтийский, или озерный соленый, или семга соленая",
+                            "gross_weight": "42",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Спинка осетровая, севрюжья холодного копчения",
+                            "gross_weight": "39",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Теша белужья холодного копчения",
+                            "gross_weight": "37",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Теша осетровая холодного копчения",
+                            "gross_weight": "37",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник белужий холодного копчения",
+                            "gross_weight": "35",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник осетровый холодного копчения",
+                            "gross_weight": "37",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник севрюжий холодного копчения",
+                            "gross_weight": "38",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 55,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Севрюга горячего копчения",
+                            "gross_weight": "35",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Осетр горячего копчения",
+                            "gross_weight": "33",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Кета либо чавыча соленые",
+                            "gross_weight": "38",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Горбуша соленая",
+                            "gross_weight": "36",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Лосось каспийский",
+                            "gross_weight": "38",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Балтийский, или озерный соленый, или семга соленая",
+                            "gross_weight": "35",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Спинка осетровая, севрюжья холодного копчения",
+                            "gross_weight": "32",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Теша белужья холодного копчения",
+                            "gross_weight": "30",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Теша осетровая холодного копчения",
+                            "gross_weight": "31",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник белужий холодного копчения",
+                            "gross_weight": "29",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник осетровый холодного копчения",
+                            "gross_weight": "31",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник севрюжий холодного копчения",
+                            "gross_weight": "32",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Севрюга горячего копчения",
+                            "gross_weight": "28",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Осетр горячего копчения",
+                            "gross_weight": "27",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Кета либо чавыча соленые",
+                            "gross_weight": "31",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Горбуша соленая",
+                            "gross_weight": "29",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Лосось каспийский",
+                            "gross_weight": "31",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Балтийский, или озерный соленый, или семга соленая",
+                            "gross_weight": "28",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Спинка осетровая, севрюжья холодного копчения",
+                            "gross_weight": "26",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Теша белужья холодного копчения",
+                            "gross_weight": "24",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Теша осетровая холодного копчения",
+                            "gross_weight": "25",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник белужий холодного копчения",
+                            "gross_weight": "23",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник осетровый холодного копчения",
+                            "gross_weight": "25",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник севрюжий холодного копчения",
+                            "gross_weight": "25",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 8,
+            "section": "Бутерброды",
+            "title": "Бутерброды с рыбными консервами",
+            "technology": "На ломтик хлеба толщиной 1–1,5 см кладут шпроты или сардины, или другую рыбу, консервированную в масле. Бутерброды можно отпускать со сливочным маслом, соответственно увеличив выход.",
+            "quality_requirements": "Внешний вид – бутерброды овальной или прямоугольной формы, покрыты целыми кусочками рыбных консервов, оформлены зеленью. Вкус и запах – соответствуют данному виду консервов, рыбный привкус. Консистенция – рыба плотная.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 60,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Рыбные консервы в масле (шпроты, сардины и др.)",
+                            "gross_weight": "32",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 55,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Рыбные консервы в масле (шпроты, сардины и др.)",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Рыбные консервы в масле (шпроты, сардины и др.)",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 9,
+            "section": "Бутерброды",
+            "title": "Бутерброды с икрой зернистой или паюсной",
+            "technology": "Ломтик хлеба толщиной 1–1,5 см слегка намазывают маслом, затем равномерно распределяют зернистую или паюсную икру, оформляют маслом и веточкой зелени петрушки.",
+            "quality_requirements": "Внешний вид – форма овальная, прямоугольная, икра выложена горкой или равномерно распределена, бутерброд оформлен маслом и веточкой петрушки. Цвет, вкус и запах – соответствуют данному изделию, приятный, икорный. Консистенция – икринки плотные, упругие.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 52,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра зернистая или паюсная",
+                            "gross_weight": "20.4",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "2",
+                            "net_weight": 2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 47,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра зернистая или паюсная",
+                            "gross_weight": "15.3",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "2",
+                            "net_weight": 2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 42,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра зернистая или паюсная",
+                            "gross_weight": "10.2",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "2",
+                            "net_weight": 2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 10,
+            "section": "Бутерброды",
+            "title": "Бутерброды с икрой кетовой",
+            "technology": "На ломтик хлеба толщиной 1–1,5 см горкой кладут кетовую икру, оформляют маслом и веточкой петрушки, или равномерно распределяют икру по поверхности хлеба, оформляют маслом и зеленью.",
+            "quality_requirements": "Внешний вид – форма овальная, круглая или прямоугольная, икра уложена горкой или равномерно распределена по поверхности хлеба, бутерброд оформлен маслом и веточкой зелени. Вкус и запах – приятные, икорные. Цвет икры – яркий, красно-оранжевый.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 57,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра кетовая",
+                            "gross_weight": "25.5",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "2",
+                            "net_weight": 2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 52,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра кетовая",
+                            "gross_weight": "20.4",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "2",
+                            "net_weight": 2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 42,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра кетовая",
+                            "gross_weight": "10.2",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "2",
+                            "net_weight": 2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 11,
+            "section": "Бутерброды",
+            "title": "Бутерброды с сельдью или килькой",
+            "technology": "Сельдь и кильку разделывают на филе. Филе сельди режут наискось по два кусочка на бутерброд. Кусочки сельди, филе кильки, выкладывают по краям хлеба, на середину кладут нашинкованный лук и масло цветочком. Бутерброд можно отпускать без лука и масла, соответственно уменьшив выход. Для оформления можно использовать яйцо (10–20 г) на порцию.",
+            "quality_requirements": "Внешний вид – форма прямоугольная или круглая, кусочки филе сельди или кильки уложены по краям хлеба, на середине нашинкованный лук и масло цветком. Вкус и запах – приятные, слегка солоноватые, привкус рыбы, без постороннего запаха. Цвет – филе соответствует требованиям. Консистенция – филе плотное сочное.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 75,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сельдь",
+                            "gross_weight": "63",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Килька",
+                            "gross_weight": "67",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Лук зеленый",
+                            "gross_weight": "6",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 65,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сельдь",
+                            "gross_weight": "52",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Килька",
+                            "gross_weight": "56",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Лук зеленый",
+                            "gross_weight": "6",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 60,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сельдь",
+                            "gross_weight": "42",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Килька",
+                            "gross_weight": "44",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Лук зеленый",
+                            "gross_weight": "6",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 12,
+            "section": "Бутерброды",
+            "title": "Ассорти рыбное на хлебе",
+            "technology": "Подготовленную рыбу нарезают тонкими кусочками. На ломтик хлеба толщиной 1–1,5 см намазывают масло, кладут на него рыбу или икру и украшают нашинкованным зеленым луком.",
+            "quality_requirements": "Внешний вид – хлеб овальной или прямоугольной формы, на хлебе лежит рыба тонким кусочком, икра горкой, бутерброд украшен зеленым луком и маслом. Вкус, запах – приятные, с рыбным привкусом. Консистенция – рыба плотная, сочная.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 60,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра кетовая или зернистая, или паюсная",
+                            "gross_weight": "10.2",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Осетр",
+                            "gross_weight": "23",
+                            "net_weight": 14,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Севрюга, или белуга",
+                            "gross_weight": "22",
+                            "net_weight": 14,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Семга соленая",
+                            "gross_weight": "14",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Лосось каспийский, балтийский, озерный соленый, или кета соленая",
+                            "gross_weight": "15",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масса отварной свежей рыбы",
+                            "gross_weight": "-",
+                            "net_weight": 10,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Лук зеленый",
+                            "gross_weight": "6",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Хлеб",
+                            "gross_weight": "30",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 13,
+            "section": "Бутерброды",
+            "title": "Закрытые бутерброды с мясными или мясными гастрономическими продуктами",
+            "technology": "Закрытые бутерброды приготавливают из двух ломтиков хлеба, между которыми помещают бутербродный продукт. Бутерброды с вареной колбасой можно отпускать с маслом сливочным, соответственно увеличив выход.",
+            "quality_requirements": "Внешний вид – бутерброд овальной или прямоугольной формы, между двумя ломтиками хлеба помещены мясопродукты. Вкус и запах – приятные, без постороннего привкуса, соответствуют входящим продуктам. Консистенция – мясные изделия плотные, мягкие, сочные.",
+            "variants": [
+                {
+                    "category": "II",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина (лопаточная, боковая)",
+                            "gross_weight": "65",
+                            "net_weight": 48,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина (лопатка)",
+                            "gross_weight": "66",
+                            "net_weight": 47,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина (шея, лопатка)",
+                            "gross_weight": "59",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масса отварных мясных продуктов",
+                            "gross_weight": "-",
+                            "net_weight": 30,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Говядина",
+                            "gross_weight": "63",
+                            "net_weight": 46,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Баранина (тазобедренная часть)",
+                            "gross_weight": "67",
+                            "net_weight": 48,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Свинина (тазобедренная часть)",
+                            "gross_weight": "52",
+                            "net_weight": 44,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Жир животный топленый пищевой",
+                            "gross_weight": "1.2",
+                            "net_weight": 1.2,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Масса жареных мясных продуктов",
+                            "gross_weight": "-",
+                            "net_weight": 30,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Колбаса вареная (любительская, отдельная, ветчинно-рубленая и др.)",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Колбаса полукопченая, или варено-копченая (полтавская, краковская, семипалатинская и др.)",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Колбаса сырокопченая (советская, деликатесная, польская, московская и др.)",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Окорок копчено-вареный или вареный (со шкурой и костями): тамбовский или воронежский",
+                            "gross_weight": "39",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Рулет вареный (со шкурой без костей): ленинградский, ростовский и др.",
+                            "gross_weight": "33",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Корейка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "38",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Шпик",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Хлеб",
+                            "gross_weight": "50",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 70,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Говядина (лопаточная, боковая)",
+                            "gross_weight": "43",
+                            "net_weight": 32,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Баранина (лопатка)",
+                            "gross_weight": "43",
+                            "net_weight": 31,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Свинина (шея, лопатка)",
+                            "gross_weight": "39",
+                            "net_weight": 33,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Масса отварных мясных продуктов",
+                            "gross_weight": "-",
+                            "net_weight": 20,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Говядина",
+                            "gross_weight": "42",
+                            "net_weight": 31,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Баранина (тазобедренная часть)",
+                            "gross_weight": "45",
+                            "net_weight": 32,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Свинина (тазобедренная часть)",
+                            "gross_weight": "34",
+                            "net_weight": 29,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Жир животный топленый пищевой",
+                            "gross_weight": "0.8",
+                            "net_weight": 0.8,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масса жареных мясных продуктов",
+                            "gross_weight": "-",
+                            "net_weight": 20,
+                            "is_subtotal": true
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Колбаса вареная (любительская, отдельная, ветчинно-рубленая и др.)",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Колбаса полукопченая, или варено-копченая (полтавская, краковская, семипалатинская и др.)",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Колбаса сырокопченая (советская, деликатесная, польская, московская и др.)",
+                            "gross_weight": "20",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Окорок копчено-вареный или вареный (со шкурой и костями): тамбовский или воронежский",
+                            "gross_weight": "33",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Рулет вареный (со шкурой без костей): ленинградский, ростовский и др.",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Корейка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "25",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Шпик",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Хлеб",
+                            "gross_weight": "50",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 14,
+            "section": "Бутерброды",
+            "title": "Закрытые бутерброды с сыром",
+            "technology": "На один из ломтиков хлеба намазывают масло, кладут на него сыр и накрывают вторым ломтиком хлеба. Бутерброд с сыром можно готовить и без масла, соответственно уменьшив выход.",
+            "quality_requirements": "Внешний вид – форма прямоугольная, между двумя ломтиками хлеба лежит сыр. Вкус и запах – приятные, острые, слегка кисловатые, без постороннего привкуса и запаха. Консистенция – свойственная используемому виду сыра; плавленый сыр мягкий, мажущийся, нежный.",
+            "variants": [
+                {
+                    "category": "II",
+                    "output_weight": 85,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр российский или угличский",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр голландский, или швейцарский, или чеддер",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский",
+                            "gross_weight": "28",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр московский, или ярославский",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр степной, или костромской",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр копченый, или сыр плавленый, или брынза",
+                            "gross_weight": "26",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "50",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр российский или угличский",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр голландский, или швейцарский, или чеддер",
+                            "gross_weight": "22",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский",
+                            "gross_weight": "23",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр московский, или ярославский",
+                            "gross_weight": "21.5",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр степной, или костромской",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр копченый, или сыр плавленый, или брынза",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "50",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 15,
+            "section": "Бутерброды",
+            "title": "Закрытые бутерброды с рыбными гастрономическими продуктами",
+            "technology": "На один ломтик хлеба кладут кету или чавычу и накрывают его вторым.",
+            "quality_requirements": "Внешний вид – овальная или прямоугольная форма, между двумя ломтиками хлеба помещены рыбные продукты. Вкус и запах – характерные для соленой рыбы, со свойственным ей ароматом. Консистенция – рыбные продукты мягкие, нежные, сочные.",
+            "variants": [
+                {
+                    "category": "II",
+                    "output_weight": 90,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Кета или чавыча соленая",
+                            "gross_weight": "46",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "50",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 85,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Кета или чавыча соленая",
+                            "gross_weight": "38",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Хлеб",
+                            "gross_weight": "50",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 16,
+            "section": "Банкетные закуски",
+            "title": "Канапе с сыром",
+            "technology": "Ломтики хлеба намазывают сливочным маслом, сверху выкладывают ломтики сыра, чтобы они полностью закрывали хлеб. На середину ломтиков с помощью кондитерского мешка наносят рисунок из масла, оформляют зеленью и перцем.",
+            "quality_requirements": "Внешний вид – форма круглая, овальная или прямоугольная, хлеб равномерно покрыт продуктами, оформлен зеленью. Вкус и запах – соответствуют данным изделиям и наполнителям.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб пшеничный",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "15",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Сыр",
+                            "gross_weight": "27",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Перец маринованный",
+                            "gross_weight": "20",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 17,
+            "section": "Банкетные закуски",
+            "title": "Канапе с сыром и окороком",
+            "technology": "Нарезанные полоски сыра и окорока выкладывают по краям ломтиков намазанного маслом хлеба, между ними располагают мелко нарубленные яйца и зелень. Оформляют маслом.",
+            "quality_requirements": "Внешний вид – форма круглая, овальная или прямоугольная, хлеб равномерно покрыт продуктами, оформлен зеленью. Вкус и запах – соответствуют данным изделиям и наполнителям.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб пшеничный",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Окорок копчено-вареный и вареный (со шкурой и костями)",
+                            "gross_weight": "20",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Сыр",
+                            "gross_weight": "16.5",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Яйца",
+                            "gross_weight": "1/4 шт.",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 18,
+            "section": "Банкетные закуски",
+            "title": "Канапе с бужениной и окороком",
+            "technology": "Ломтики хлеба намазывают сливочным маслом. Буженину и окорок выкладывают полосками по краям хлеба. Середину оформляют огурцом или перцем и измельченной зеленью. Эти канапе можно готовить на ржаном хлебе.",
+            "quality_requirements": "Внешний вид – форма круглая, овальная или прямоугольная, хлеб равномерно покрыт продуктами, оформлен зеленью. Вкус и запах – соответствуют данным изделиям и наполнителям.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб пшеничный",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Окорок копчено-вареный и вареный (со шкурой и костями)",
+                            "gross_weight": "20",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Буженина",
+                            "gross_weight": "20",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Огурцы маринованные",
+                            "gross_weight": "18",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Огурцы свежие",
+                            "gross_weight": "13",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Перец маринованный",
+                            "gross_weight": "20",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 19,
+            "section": "Банкетные закуски",
+            "title": "Канапе с паштетом",
+            "technology": "Ломтики хлеба покрывают тонким слоем сливочного масла. Из корнетика выпускают паштет. Оформляют перцем, рублеными яйцами.",
+            "quality_requirements": "Внешний вид – форма круглая, овальная или прямоугольная, хлеб равномерно покрыт продуктами, оформлен зеленью. Вкус и запах – соответствуют данным изделиям и наполнителям.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб пшеничный",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Паштет из печени №160",
+                            "gross_weight": "-",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Перец маринованный",
+                            "gross_weight": "20",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Яйца",
+                            "gross_weight": "1/4 шт.",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 20,
+            "section": "Банкетные закуски",
+            "title": "Канапе с икрой и севрюгой",
+            "technology": "На ломтики хлеба намазывают тонким слоем сливочное масло. Ломтики севрюги выкладывают так, чтобы они полностью закрывали хлеб. На середину кладут горкой икру, оформляют свежим огурцом и зеленым луком.",
+            "quality_requirements": "Внешний вид – форма – круглая, овальная, прямоугольная, треугольная или другая, хлеб равномерно покрыт продуктами, оформлен веточкой зелени петрушки или лука зеленого. Вкус и запах – соответствуют данному виду продуктов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб пшеничный",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Икра кетовая",
+                            "gross_weight": "10.2",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Севрюга горячего копчения",
+                            "gross_weight": "21",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Огурцы свежие",
+                            "gross_weight": "19",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 21,
+            "section": "Банкетные закуски",
+            "title": "Канапе с икрой, семгой и осетром",
+            "technology": "Полоски хлеба намазывают тонким слоем сливочного масла, сверху выкладывают икру, семгу и осетр. Оформляют маслом и зеленым луком. Полоски хлеба нарезают на прямоугольники, треугольники, ромбы и т.д.",
+            "quality_requirements": "Внешний вид – форма – круглая, овальная, прямоугольная, треугольная или другая, хлеб равномерно покрыт продуктами, оформлен веточкой зелени петрушки или лука зеленого. Вкус и запах – соответствуют данному виду продуктов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб пшеничный",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Икра паюсная",
+                            "gross_weight": "10.2",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Семга соленая",
+                            "gross_weight": "21",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Осетр",
+                            "gross_weight": "35",
+                            "net_weight": 21,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Масса отварного осетра",
+                            "gross_weight": "-",
+                            "net_weight": 15,
+                            "is_subtotal": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 22,
+            "section": "Банкетные закуски",
+            "title": "Канапе с паюсной икрой",
+            "technology": "Полоски хлеба намазывают тонким слоем сливочного масла. Сверху выкладывают икру, кружочки очищенного огурца и рубленые яйца. Шинкованный зеленый лук располагают по краям. Полоски хлеба нарезают на кусочки различной геометрической формы.",
+            "quality_requirements": "Внешний вид – форма – круглая, овальная, прямоугольная, треугольная или другая, хлеб равномерно покрыт продуктами, оформлен веточкой зелени петрушки или лука зеленого. Вкус и запах – соответствуют данному виду продуктов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб пшеничный",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Икра паюсная",
+                            "gross_weight": "10.2",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Яйца",
+                            "gross_weight": "2/5 шт.",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Огурцы свежие",
+                            "gross_weight": "19",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 23,
+            "section": "Банкетные закуски",
+            "title": "Канапе с килькой и яйцом",
+            "technology": "На гренок круглой формы из ржаного хлеба выкладывают кружочек яйца, на него кружочек свежего очищенного огурца, а сверху – филе кильки в виде кольца. Середину оформляют шинкованным луком.",
+            "quality_requirements": "Внешний вид – форма – круглая, овальная, прямоугольная, треугольная или другая, хлеб равномерно покрыт продуктами, оформлен веточкой зелени петрушки или лука зеленого. Вкус и запах – соответствуют данному виду продуктов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Хлеб ржаной",
+                            "gross_weight": "45",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Яйца",
+                            "gross_weight": "1/4 шт.",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Кильки",
+                            "gross_weight": "44",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Огурцы свежие",
+                            "gross_weight": "13",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 24,
+            "section": "Банкетные закуски",
+            "title": "Корзиночки с салатом",
+            "technology": "Выпеченные корзиночки или волованы наполняют готовыми салатами столичный с птицей или дичью, мясной, с рыбой горячего копчения или морепродуктами – (с крабами, креветками, рыбой, яичный) и оформляют продуктами, входящими в состав салата, и зеленью.",
+            "quality_requirements": "Внешний вид – корзиночки и волованы – высокие коробочки круглой или овальной формы, выпеченные из слоеного теста, – аккуратно заполнены салатом, копченостями или паштетом, украшены веточкой зелени. Вкус и запах – характерные входящим компонентам. Цвет – корзиночек и волованов соломенный, цвет наполнителей – как у компонентов. Консистенция – корзиночки рассыпчатые, волованы слоеные, пропеченные; салат упругий, мягкий, с одинаковой нарезкой компонентов; паштет мажущийся, однородный.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 100,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Корзиночки",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Салат с крабами",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 25,
+            "section": "Банкетные закуски",
+            "title": "Корзиночки с паштетом",
+            "technology": "Корзиночки наполняют готовым паштетом из печени, оформляют яйцом, майонезом с корнишонами и зеленью.",
+            "quality_requirements": "Внешний вид – корзиночки и волованы – высокие коробочки круглой или овальной формы, выпеченные из слоеного теста, – аккуратно заполнены салатом, копченостями или паштетом, украшены веточкой зелени. Вкус и запах – характерные входящим компонентам. Цвет – корзиночек и волованов соломенный, цвет наполнителей – как у компонентов. Консистенция – корзиночки рассыпчатые, волованы слоеные, пропеченные; салат упругий, мягкий, с одинаковой нарезкой компонентов; паштет мажущийся, однородный.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 100,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Корзиночки",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Паштет из печени №160",
+                            "gross_weight": "-",
+                            "net_weight": 35,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Яйца",
+                            "gross_weight": "1/4 шт.",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Соус №598",
+                            "gross_weight": "-",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 26,
+            "section": "Банкетные закуски",
+            "title": "Корзиночки с языком или окороком",
+            "technology": "Корзиночки наполняют мелко нарезанным вареным языком (или ветчиной), заправленным майонезом с корнишонами, оформляют зеленью.",
+            "quality_requirements": "Внешний вид – корзиночки и волованы – высокие коробочки круглой или овальной формы, выпеченные из слоеного теста, – аккуратно заполнены салатом, копченостями или паштетом, украшены веточкой зелени. Вкус и запах – характерные входящим компонентам. Цвет – корзиночек и волованов соломенный, цвет наполнителей – как у компонентов. Консистенция – корзиночки рассыпчатые, волованы слоеные, пропеченные; салат упругий, мягкий, с одинаковой нарезкой компонентов; паштет мажущийся, однородный.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 100,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Корзиночки",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Язык отварной",
+                            "gross_weight": "-",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Окорок копчено-вареный (со шкурой и костями)",
+                            "gross_weight": "-",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Соус №598",
+                            "gross_weight": "-",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 27,
+            "section": "Банкетные закуски",
+            "title": "Корзиночки с крабами, креветками, кальмарами или морским гребешком",
+            "technology": "Подготовленные морепродукты выкладывают в корзиночки и оформляют зеленью.",
+            "quality_requirements": "Внешний вид – корзиночки и волованы – высокие коробочки круглой или овальной формы, выпеченные из слоеного теста, – аккуратно заполнены салатом, копченостями или паштетом, украшены веточкой зелени. Вкус и запах – характерные входящим компонентам. Цвет – корзиночек и волованов соломенный, цвет наполнителей – как у компонентов. Консистенция – корзиночки рассыпчатые, волованы слоеные, пропеченные; салат упругий, мягкий, с одинаковой нарезкой компонентов; паштет мажущийся, однородный.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 100,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Корзиночки",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Морепродукты под майонезом №146",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 28,
+            "section": "Банкетные закуски",
+            "title": "Волованы с салатом",
+            "technology": "Выпеченные корзиночки или волованы наполняют готовыми салатами столичный с птицей или дичью, мясной, с рыбой горячего копчения или морепродуктами – (с крабами, креветками, рыбой, яичный) и оформляют продуктами, входящими в состав салата, и зеленью.",
+            "quality_requirements": "Внешний вид – корзиночки и волованы – высокие коробочки круглой или овальной формы, выпеченные из слоеного теста, – аккуратно заполнены салатом, копченостями или паштетом, украшены веточкой зелени. Вкус и запах – характерные входящим компонентам. Цвет – корзиночек и волованов соломенный, цвет наполнителей – как у компонентов. Консистенция – корзиночки рассыпчатые, волованы слоеные, пропеченные; салат упругий, мягкий, с одинаковой нарезкой компонентов; паштет мажущийся, однородный.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Волованы",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Салат с крабами",
+                            "gross_weight": "-",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 29,
+            "section": "Банкетные закуски",
+            "title": "Волованы с икрой",
+            "technology": "Икру выкладывают в волованы, оформляют сливочным маслом в виде цветочка, свежим очищенным огурцом, яйцом и зеленью.",
+            "quality_requirements": "Внешний вид – волован наполнен продуктами, украшен зеленью и свежими огурцами. Вкус и запах – свойственные хорошо выпеченному слоеному тесту. Цвет – волованы – соломенные; наполнители имеют цвет входящих компонентов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Волованы",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Икра зернистая, или паюсная, или кетовая",
+                            "gross_weight": "15.3",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Масло сливочное",
+                            "gross_weight": "5",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Огурцы свежие",
+                            "gross_weight": "13",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Яйца",
+                            "gross_weight": "1/4 шт.",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 30,
+            "section": "Банкетные закуски",
+            "title": "Волованы с курицей",
+            "technology": "Мякоть отварных кур без кожи нарезают соломкой, заправляют майонезом, выкладывают в волован и оформляют зеленью.",
+            "quality_requirements": "Внешний вид – волован наполнен продуктами, украшен зеленью и свежими огурцами. Вкус и запах – свойственные хорошо выпеченному слоеному тесту. Цвет – волованы – соломенные; наполнители имеют цвет входящих компонентов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Волованы",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Курица отварная (мякоть)",
+                            "gross_weight": "-",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Майонез №603",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 31,
+            "section": "Банкетные закуски",
+            "title": "Волованы с окороком",
+            "technology": "Мякоть отварных кур без кожи нарезают соломкой, заправляют майонезом, выкладывают в волован и оформляют зеленью",
+            "quality_requirements": "Внешний вид – волован наполнен продуктами, украшен зеленью и свежими огурцами. Вкус и запах – свойственные хорошо выпеченному слоеному тесту. Цвет – волованы – соломенные; наполнители имеют цвет входящих компонентов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Волованы",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Окорок копчено-вареный или вареный (со шкурой и костью)",
+                            "gross_weight": "33",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Майонез №603",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 32,
+            "section": "Банкетные закуски",
+            "title": "Волованы с семгой или кетой",
+            "technology": "Мякоть семги или кеты нарезают брусочками, укладывают кольцами в волованы, в середину кладут кусочки свежего очищенного огурца, масло и оформляют зеленым луком.",
+            "quality_requirements": "Внешний вид – волован наполнен продуктами, украшен зеленью и свежими огурцами. Вкус и запах – свойственные хорошо выпеченному слоеному тесту. Цвет – волованы – соломенные; наполнители имеют цвет входящих компонентов.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 80,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Волованы",
+                            "gross_weight": "2–4 шт.",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Кета соленая",
+                            "gross_weight": "31",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Семга соленая",
+                            "gross_weight": "28",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Масло сливочное",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Огурцы свежие",
+                            "gross_weight": "13",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 33,
+            "section": "Гастрономические товары",
+            "title": "Масло (порциями)",
+            "technology": "Масло нарезают на кусочки различной формы. При нарезке масла можно использовать гофрированные, карбовочные ножи и приспособления.",
+            "quality_requirements": "Внешний вид – кусочки круглой или прямоугольной формы. Вкус и запах – приятные, без постороннего привкуса, соответствуют наполнителю. Консистенция – мягкая, эластичная, однородная.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 20,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Масло сливочное, или шоколадное, или фруктовое, или медовое, или килечное №599, или селедочное №599, или сырное №600",
+                            "gross_weight": "20",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 15,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Масло сливочное, или шоколадное, или фруктовое, или медовое, или килечное №599, или селедочное №599, или сырное №600",
+                            "gross_weight": "15",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 10,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Масло сливочное, или шоколадное, или фруктовое, или медовое, или килечное №599, или селедочное №599, или сырное №600",
+                            "gross_weight": "10",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 34,
+            "section": "Гастрономические товары",
+            "title": "Сыр",
+            "technology": "Сыр разрезают на крупные куски прямоугольной или треугольной формы, очищают от корки и нарезают на порции.",
+            "quality_requirements": "Внешний вид – сыр нарезан тонкими ломтиками. Вкус и запах – приятные, слегка острые, без посторонних привкуса и запаха. Цвет – от белого до светло-желтого. Консистенция – упругая, мажущаяся.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 75,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр украинский, или российский, или волжский, или угличский, или рокфор, или голландский",
+                            "gross_weight": "80",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр швейцарский, или чеддер",
+                            "gross_weight": "82",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский, или московский",
+                            "gross_weight": "85",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр ярославский, или степной",
+                            "gross_weight": "81",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр костромской, или копченый",
+                            "gross_weight": "78",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр плавленый, или брынза",
+                            "gross_weight": "78",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр украинский, или российский, или волжский, или угличский, или рокфор, или голландский",
+                            "gross_weight": "53",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр швейцарский, или чеддер",
+                            "gross_weight": "54",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский, или московский",
+                            "gross_weight": "57",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр ярославский, или степной",
+                            "gross_weight": "54",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр костромской, или копченый",
+                            "gross_weight": "52",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр плавленый, или брынза",
+                            "gross_weight": "52",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 30,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр украинский, или российский, или волжский, или угличский, или рокфор, или голландский",
+                            "gross_weight": "32",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр швейцарский, или чеддер",
+                            "gross_weight": "33",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр латвийский, или московский",
+                            "gross_weight": "34",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр ярославский, или степной",
+                            "gross_weight": "32",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр костромской, или копченый",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр плавленый, или брынза",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 35,
+            "section": "Гастрономические товары",
+            "title": "Сырная доска",
+            "technology": "Сыры нарезают в виде кубиков или другой формы, массой 10–15 г. При отпуске на тарелку в виде горки укладывают нарезанные сыры, между ними укладывают жареный орех. Оформляют виноградом или киви, зеленью.",
+            "quality_requirements": "Внешний вид – на тарелке (доске) смесь сыров с добавлением поджаренного ореха и винограда, оформлена зеленью. Цвет – входящих продуктов. Консистенция – сыров твердых – твердая, мягких – мягкая, виноград, орехи упругие.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 125,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Сыр «Дор Блю»",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Сыр «Пармезан»",
+                            "gross_weight": "33",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Сыр «Рассольный»",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 4,
+                            "name": "Орех грецкий",
+                            "gross_weight": "29",
+                            "net_weight": 12,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Виноград",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 5,
+                            "name": "Киви",
+                            "gross_weight": "21",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 6,
+                            "name": "Зелень петрушки",
+                            "gross_weight": "4",
+                            "net_weight": 3,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 36,
+            "section": "Гастрономические товары",
+            "title": "Икра",
+            "technology": "Порцию икры оформляют ломтиком лимона. Отдельно подают шинкованный зеленый лук. Икру можно отпускать без лука и лимона, соответственно уменьшив выход блюда.",
+            "quality_requirements": "Внешний вид – икра уложена горкой, оформлена лимоном и луком. Вкус и запах – приятные, икорный аромат без посторонних привкуса и запаха. Консистенция – икринки упругие; поверхность слегка влажная или сухая.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 79,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра зернистая или паюсная, или кетовая",
+                            "gross_weight": "51",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Лук зеленый",
+                            "gross_weight": "19",
+                            "net_weight": 15,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Лимон",
+                            "gross_weight": "16",
+                            "net_weight": 14,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 49,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра зернистая или паюсная, или кетовая",
+                            "gross_weight": "30.6",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Лук зеленый",
+                            "gross_weight": "13",
+                            "net_weight": 10,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Лимон",
+                            "gross_weight": "10",
+                            "net_weight": 9,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 25,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Икра зернистая или паюсная, или кетовая",
+                            "gross_weight": "20.4",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Лук зеленый",
+                            "gross_weight": "6",
+                            "net_weight": 5,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Лимон",
+                            "gross_weight": "-",
+                            "net_weight": null,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 37,
+            "section": "Гастрономические товары",
+            "title": "Рыба соленая (порциями)",
+            "technology": "Соленую рыбу пластуют вдоль позвоночника. С части, предназначенной для нарезки, удаляют позвоночник и реберные кости. Рыбу нарезают тонкими кусочками, по 2–3 на порцию. Украшают лимоном, зеленью.",
+            "quality_requirements": "Внешний вид – рыба нарезана тонкими кусочками, украшена лимоном, зеленью. Вкус и запах – приятные, без посторонних привкуса и запаха. Консистенция – рыба плотная, нежная.",
+            "variants": [
+                {
+                    "category": "I, II",
+                    "output_weight": 89,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Кета",
+                            "gross_weight": "115",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Семга",
+                            "gross_weight": "106",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Лосось каспийский или озерный",
+                            "gross_weight": "115",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Лимон",
+                            "gross_weight": "16",
+                            "net_weight": 14,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 59,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Кета",
+                            "gross_weight": "77",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Семга",
+                            "gross_weight": "70",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Лосось каспийский или озерный",
+                            "gross_weight": "77",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Лимон",
+                            "gross_weight": "10",
+                            "net_weight": 9,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 38,
+            "section": "Гастрономические товары",
+            "title": "Рыба холодного копчения (порциями)",
+            "technology": "Балыки перед нарезкой зачищают от кожи, костей и хрящей и нарезают по 2–3 кусочка на порцию. К блюду можно подавать лимон (9–18 г массой нетто).",
+            "quality_requirements": "Внешний вид – балык аккуратно нарезан по 2–3 кусочка на порцию, оформлен лимоном. Вкус и запах – приятные; привкус рыбы, аромат копчения. Консистенция – нежная, сочная, плотная.",
+            "variants": [
+                {
+                    "category": "I, II",
+                    "output_weight": 75,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Спинки-балыки: осетровые или севрюжьи",
+                            "gross_weight": "97",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Белорыбьи, или лосося балтийского",
+                            "gross_weight": "99",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Кеты, или чавычи, или нерки",
+                            "gross_weight": "101",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник севрюжий",
+                            "gross_weight": "95",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Осетровый",
+                            "gross_weight": "93",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Белужий",
+                            "gross_weight": "87",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Горбуши",
+                            "gross_weight": "129",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Скумбрия дальневосточная",
+                            "gross_weight": "101",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Спинки-балыки: осетровые или севрюжьи",
+                            "gross_weight": "65",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Белорыбьи, или лосося балтийского",
+                            "gross_weight": "66",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Кеты, или чавычи, или нерки",
+                            "gross_weight": "68",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Боковник севрюжий",
+                            "gross_weight": "63",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Осетровый",
+                            "gross_weight": "62",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Белужий",
+                            "gross_weight": "58",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Горбуши",
+                            "gross_weight": "86",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Скумбрия дальневосточная",
+                            "gross_weight": "68",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 39,
+            "section": "Гастрономические товары",
+            "title": "Рыба горячего копчения (порциями)",
+            "technology": "Звенья рыбы зачищают от кожи, хрящей и нарезают кусочками толщиной 3–4 мм. К блюду можно подать лимон (9–18 г массой нетто), гарнир, соус.",
+            "quality_requirements": "Внешний вид – нарезанные кусочки оформлены лимоном. Вкус и запах – приятные, рыбные; аромат копчения; без посторонних привкуса и запаха. Консистенция – нежная, сочная, плотная.",
+            "variants": [
+                {
+                    "category": "I, II",
+                    "output_weight": 155,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Севрюга",
+                            "gross_weight": "104",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Осетр",
+                            "gross_weight": "100",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окунь морской",
+                            "gross_weight": "100",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сом (кроме океанического)",
+                            "gross_weight": "107",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Треска",
+                            "gross_weight": "115",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Гарнир №546, 547, 548",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Соус №608",
+                            "gross_weight": "-",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 120,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Севрюга",
+                            "gross_weight": "69",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Осетр",
+                            "gross_weight": "67",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окунь морской",
+                            "gross_weight": "67",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сом (кроме океанического)",
+                            "gross_weight": "71",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Треска",
+                            "gross_weight": "77",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Гарнир №546, 547, 548",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Соус №608",
+                            "gross_weight": "-",
+                            "net_weight": 20,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 40,
+            "section": "Гастрономические товары",
+            "title": "Рыбные консервы (порциями)",
+            "technology": "Масло, томатную заливку и сок при отпуске консервов распределяют равномерно по порциям. Рыбные консервы можно отпускать с гарниром (30–100 г).",
+            "quality_requirements": "Внешний вид – куски рыбы целые, масло, сок, томатная заливка равномерно распределены. Вкус и запах – приятные; с привкусом соответствующего вида рыбы. Консистенция – нежная, не сухая.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 100,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы в масле (шпроты, сардина, корюшка, ряпушка, печень трески и др.)",
+                            "gross_weight": "105",
+                            "net_weight": 100,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы в томатном соусе (частик крупный, мелкий, осетровые, треска, печень трески, бычки и др.)",
+                            "gross_weight": "105",
+                            "net_weight": 100,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Скумбрия атлантическая в томатном соусе",
+                            "gross_weight": "103",
+                            "net_weight": 100,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Пресервы в горчичном соусе",
+                            "gross_weight": "105",
+                            "net_weight": 100,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы натуральные (кроме лососевых)",
+                            "gross_weight": "105",
+                            "net_weight": 100,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 75,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы в масле (шпроты, сардина, корюшка, ряпушка, печень трески и др.)",
+                            "gross_weight": "79",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы в томатном соусе (частик крупный, мелкий, осетровые, треска, печень трески, бычки и др.)",
+                            "gross_weight": "79",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Скумбрия атлантическая в томатном соусе",
+                            "gross_weight": "77",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Пресервы в горчичном соусе",
+                            "gross_weight": "79",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы натуральные (кроме лососевых)",
+                            "gross_weight": "79",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы в масле (шпроты, сардина, корюшка, ряпушка, печень трески и др.)",
+                            "gross_weight": "53",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы в томатном соусе (частик крупный, мелкий, осетровые, треска, печень трески, бычки и др.)",
+                            "gross_weight": "53",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Скумбрия атлантическая в томатном соусе",
+                            "gross_weight": "52",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Пресервы в горчичном соусе",
+                            "gross_weight": "53",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Консервы натуральные (кроме лососевых)",
+                            "gross_weight": "53",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 41,
+            "section": "Гастрономические товары",
+            "title": "Колбаса (порциями)",
+            "technology": "Очищенную колбасу нарезают: толстые батоны – поперек, по половине куска, а тонкие батоны – наискось, по 2–3 куска на порцию. К вареной колбасе можно подать соусы, хрен или майонез с корнишонами (20–25 г на порцию).",
+            "quality_requirements": "Внешний вид – колбаса аккуратно нарезана по 2–3 куска на порцию. Вкус и запах – приятные; запах, свойственный данному виду колбасы. Консистенция – упругая, плотная, мягкая.",
+            "variants": [
+                {
+                    "category": "I",
+                    "output_weight": 105,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса вареная (любительская, или отдельная), или чайная, или ветчинно-рубленая и др.",
+                            "gross_weight": "77",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Полукопченая, или варено-копченая (полтавская и др.)",
+                            "gross_weight": "62",
+                            "net_weight": 60,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сырокопченая (деликатесная и др.)",
+                            "gross_weight": "51",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Гарнир №546, 548",
+                            "gross_weight": "-",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "II",
+                    "output_weight": 110,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса вареная (любительская, или отдельная), или чайная, или ветчинно-рубленая и др.",
+                            "gross_weight": "62",
+                            "net_weight": 60,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Полукопченая, или варено-копченая (полтавская и др.)",
+                            "gross_weight": "51",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сырокопченая (деликатесная и др.)",
+                            "gross_weight": "41",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Гарнир №546, 548",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 90,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Колбаса вареная (любительская, или отдельная), или чайная, или ветчинно-рубленая и др.",
+                            "gross_weight": "41",
+                            "net_weight": 40,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Полукопченая, или варено-копченая (полтавская и др.)",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Сырокопченая (деликатесная и др.)",
+                            "gross_weight": "31",
+                            "net_weight": 30,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Гарнир №546, 548",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 42,
+            "section": "Гастрономические товары",
+            "title": "Окорок или корейка, или грудинка, или шпик с гарниром",
+            "technology": "Свинокопчености нарезают тонкими ломтиками. При отпуске сбоку кладут гарнир, соус подают отдельно. Блюдо можно подавать без гарнира и соуса.",
+            "quality_requirements": "Внешний вид – свинокопчености аккуратно нарезаны тонкими ломтиками, уложены на блюдо, сбоку – гарнир, оформлены зеленью. Вкус и запах – приятные, свойственные данному виду изделий; аромат специй и копчения.",
+            "variants": [
+                {
+                    "category": "I, II",
+                    "output_weight": 150,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок сырокопченый (со шкурой и костями), используемый в сыром виде, тамбовский",
+                            "gross_weight": "93",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок сырокопченый сибирский",
+                            "gross_weight": "90",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок копчено-вареный и вареный (со шкурой и костями) тамбовский, воронежский",
+                            "gross_weight": "99",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Рулет копчено-вареный (со шкурой и костями) ленинградский, ростовский",
+                            "gross_weight": "85",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Рулет копчено-вареный (со шкурой и костями) ленинградский, ростовский (вторая строка)",
+                            "gross_weight": "82",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Карбонат, буженина",
+                            "gross_weight": "76",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Ветчина в форме",
+                            "gross_weight": "77",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "94",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "96",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Шпик",
+                            "gross_weight": "78",
+                            "net_weight": 75,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Гарнир №546, 548",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Соус №603, 608",
+                            "gross_weight": "-",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 125,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок сырокопченый (со шкурой и костями), используемый в сыром виде, тамбовский",
+                            "gross_weight": "62",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок сырокопченый сибирский",
+                            "gross_weight": "60",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Окорок копчено-вареный и вареный (со шкурой и костями) тамбовский, воронежский",
+                            "gross_weight": "66",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Рулет копчено-вареный (со шкурой и костями) ленинградский, ростовский",
+                            "gross_weight": "57",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Рулет копчено-вареный (со шкурой и костями) ленинградский, ростовский (вторая строка)",
+                            "gross_weight": "54",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Карбонат, буженина",
+                            "gross_weight": "51",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Ветчина в форме",
+                            "gross_weight": "51",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Корейка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "63",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Грудинка копченая, используемая в сыром виде (без шкуры и костей)",
+                            "gross_weight": "64",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 1,
+                            "name": "Шпик",
+                            "gross_weight": "52",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 2,
+                            "name": "Гарнир №546, 548",
+                            "gross_weight": "-",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        },
+                        {
+                            "alternative_group": 3,
+                            "name": "Соус №603, 608",
+                            "gross_weight": "-",
+                            "net_weight": 25,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "recipe_number": 43,
+            "section": "Гастрономические товары",
+            "title": "Консервы овощные закусочные (порциями)",
+            "technology": "Консервы равномерно распределяют на порции.",
+            "quality_requirements": "Внешний вид – консервы аккуратно выложены, овощи сохранили форму. Вкус и запах – приятные, нежные, без посторонних привкуса и запаха. Консистенция – икра мажущаяся; фаршированные овощи целые, не переваренные.",
+            "variants": [
+                {
+                    "category": "I, II",
+                    "output_weight": 100,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Баклажаны, перец, томаты, фаршированные овощами или овощами с рисом, баклажаны, кабачки, нарезанные кружочками, икра из баклажанов, кабачковая и др.",
+                            "gross_weight": "105",
+                            "net_weight": 100,
+                            "is_subtotal": false
+                        }
+                    ]
+                },
+                {
+                    "category": "III",
+                    "output_weight": 50,
+                    "ingredients": [
+                        {
+                            "alternative_group": 1,
+                            "name": "Баклажаны, перец, томаты, фаршированные овощами или овощами с рисом, баклажаны, кабачки, нарезанные кружочками, икра из баклажанов, кабачковая и др.",
+                            "gross_weight": "53",
+                            "net_weight": 50,
+                            "is_subtotal": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
