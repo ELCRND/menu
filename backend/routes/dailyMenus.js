@@ -1,5 +1,6 @@
 import { Router } from "express";
 import db from "../db.js";
+import { buildOkud0504202Workbook } from "../services/exportOkud0504202.js";
 
 const router = Router();
 
@@ -395,5 +396,197 @@ function parseGrossField(rawValue, netWeight, name = "") {
   const avgGrams = (minVal + maxVal) / 2;
   return { isPieces: false, piecesMin: 0, piecesMax: 0, grams: avgGrams };
 }
+
+function formatPiecesLabel(minVal, maxVal) {
+  const minP = Number(minVal.toFixed(2));
+  const maxP = Number(maxVal.toFixed(2));
+  if (maxP <= 0) return "";
+  return minP === maxP ? `${minP} шт.` : `${minP}–${maxP} шт.`;
+}
+
+// Единая функция расчета продуктов за день (и для JSON-таблицы, и для шахматки 0504202)
+function calculateDailyProducts(menuId) {
+  const headcounts = db
+    .prepare(
+      "SELECT diet_id, SUM(people_count) as total_people FROM daily_headcount WHERE daily_menu_id = ? GROUP BY diet_id",
+    )
+    .all(menuId);
+  const peopleByDiet = Object.fromEntries(
+    headcounts.map((h) => [h.diet_id, h.total_people]),
+  );
+
+  const items = db
+    .prepare("SELECT * FROM daily_menu_items WHERE daily_menu_id = ?")
+    .all(menuId);
+  const getIngredients = db.prepare(
+    "SELECT * FROM ingredients WHERE variant_id = ? AND is_subtotal = 0 ORDER BY id",
+  );
+
+  const summary = {};
+
+  for (const item of items) {
+    const people = peopleByDiet[item.diet_id] || 0;
+    if (people === 0) continue;
+
+    const allIngs = getIngredients.all(item.variant_id);
+    const selectedAlts = item.selected_alternatives
+      ? JSON.parse(item.selected_alternatives)
+      : {};
+
+    const groups = {};
+    for (const ing of allIngs) {
+      if (!groups[ing.alternative_group]) groups[ing.alternative_group] = [];
+      groups[ing.alternative_group].push(ing);
+    }
+
+    for (const [groupId, groupIngs] of Object.entries(groups)) {
+      const chosenId = selectedAlts[groupId];
+      const activeIng =
+        groupIngs.find((i) => Number(i.id) === chosenId) || groupIngs[0];
+
+      const cleanName = activeIng.name.replace(/^>\s*/, "").trim();
+      const net =
+        parseFloat(String(activeIng.net_weight ?? 0).replace(",", ".")) || 0;
+      const parsedGross = parseGrossField(
+        activeIng.gross_weight,
+        net,
+        cleanName,
+      );
+      const multiplier = people * (item.portion_multiplier || 1.0);
+
+      if (!summary[cleanName]) {
+        summary[cleanName] = {
+          name: cleanName,
+          gross_grams: 0,
+          pieces_min: 0,
+          pieces_max: 0,
+          net_grams: 0,
+          cells: {}, // разбивка по ключу `${meal_time_id}_${diet_id}` для формы 0504202
+        };
+      }
+
+      const grossAdd = parsedGross.grams * multiplier;
+      const pMinAdd = parsedGross.piecesMin * multiplier;
+      const pMaxAdd = parsedGross.piecesMax * multiplier;
+      const netAdd = net * multiplier;
+
+      summary[cleanName].gross_grams += grossAdd;
+      summary[cleanName].pieces_min += pMinAdd;
+      summary[cleanName].pieces_max += pMaxAdd;
+      summary[cleanName].net_grams += netAdd;
+
+      const cellKey = `${item.meal_time_id}_${item.diet_id}`;
+      if (!summary[cleanName].cells[cellKey]) {
+        summary[cleanName].cells[cellKey] = {
+          gross_grams: 0,
+          pieces_min: 0,
+          pieces_max: 0,
+        };
+      }
+      summary[cleanName].cells[cellKey].gross_grams += grossAdd;
+      summary[cleanName].cells[cellKey].pieces_min += pMinAdd;
+      summary[cleanName].cells[cellKey].pieces_max += pMaxAdd;
+    }
+  }
+
+  return Object.values(summary)
+    .sort((a, b) => a.name.localeCompare(b.name, "ru"))
+    .map((p) => {
+      const isPieces = p.pieces_max > 0;
+      const formattedCells = {};
+
+      for (const [key, cell] of Object.entries(p.cells)) {
+        formattedCells[key] = {
+          gross_kg: Number((cell.gross_grams / 1000).toFixed(3)),
+          pieces_label: formatPiecesLabel(cell.pieces_min, cell.pieces_max),
+        };
+      }
+
+      return {
+        name: p.name,
+        unit: isPieces ? "шт." : "кг",
+        gross_grams: p.gross_grams,
+        pieces_min: p.pieces_min,
+        pieces_max: p.pieces_max,
+        pieces_label: formatPiecesLabel(p.pieces_min, p.pieces_max),
+        net_grams: p.net_grams,
+        gross_kg: Number((p.gross_grams / 1000).toFixed(3)),
+        net_kg: Number((p.net_grams / 1000).toFixed(3)),
+        cells: formattedCells,
+      };
+    });
+}
+
+// Расчет сводной продуктовой ведомости -> GET /api/daily-menus/:date/products-summary
+router.get("/:date/products-summary", (req, res) => {
+  const { date } = req.params;
+  const menu = db
+    .prepare("SELECT * FROM daily_menus WHERE menu_date = ?")
+    .get(date);
+  if (!menu)
+    return res.status(404).json({ error: "Меню на эту дату не найдено" });
+
+  const products = calculateDailyProducts(menu.id);
+  // Убираем служебное поле cells из обычного JSON-ответа для таблицы
+  const result = products.map(({ cells, ...rest }) => rest);
+  res.json(result);
+});
+
+// Выгрузка в Excel по форме ОКУД 0504202 -> GET /api/daily-menus/:date/export-0504202
+router.get("/:date/export-0504202", async (req, res) => {
+  try {
+    const { date } = req.params;
+    const menu = db
+      .prepare("SELECT * FROM daily_menus WHERE menu_date = ?")
+      .get(date);
+    if (!menu)
+      return res.status(404).json({ error: "Меню на эту дату не найдено" });
+
+    // Берем только те диеты, по которым на этот день есть люди (чтобы не плодить пустые колонки)
+    const activeDiets = db
+      .prepare(
+        `
+        SELECT DISTINCT d.id, d.code, d.name
+        FROM diets d
+        JOIN daily_headcount dh ON dh.diet_id = d.id
+        WHERE dh.daily_menu_id = ? AND dh.people_count > 0
+        ORDER BY d.id
+      `,
+      )
+      .all(menu.id);
+
+    const mealTimes = db
+      .prepare("SELECT id, name FROM meal_times ORDER BY sort_order, id")
+      .all();
+
+    const headcounts = db
+      .prepare("SELECT * FROM daily_headcount WHERE daily_menu_id = ?")
+      .all(menu.id);
+
+    const matrixRows = calculateDailyProducts(menu.id);
+
+    const workbook = await buildOkud0504202Workbook({
+      date,
+      diets: activeDiets,
+      mealTimes,
+      headcounts,
+      matrixRows,
+    });
+
+    res.setHeader(
+      "Content-Type",
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    );
+    res.setHeader(
+      "Content-Disposition",
+      `attachment; filename="Menu_trebovanie_0504202_${date}.xlsx"`,
+    );
+
+    await workbook.xlsx.write(res);
+    res.end();
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 export default router;

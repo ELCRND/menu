@@ -1,0 +1,260 @@
+import ExcelJS from "exceljs";
+
+const THIN_BORDER = {
+  top: { style: "thin" },
+  left: { style: "thin" },
+  bottom: { style: "thin" },
+  right: { style: "thin" },
+};
+
+export async function buildOkud0504202Workbook({
+  date,
+  diets,
+  mealTimes,
+  headcounts,
+  matrixRows,
+}) {
+  const workbook = new ExcelJS.Workbook();
+  const sheet = workbook.addWorksheet("ОКУД 0504202", {
+    pageSetup: {
+      paperSize: 9, // A4
+      orientation: "landscape",
+      fitToPage: true,
+      fitToWidth: 1,
+      fitToHeight: 0,
+    },
+  });
+
+  sheet.views = [{ showGridLines: true }];
+
+  // Колонки: № (1) + Наименование (2-3) + Ед.изм (4) + [Приемы пищи * Столы] + Всего к выдаче (последняя)
+  const dynamicColsCount = mealTimes.length * diets.length;
+  const totalCols = 4 + dynamicColsCount + 1;
+  const lastColLetter = sheet.getColumn(totalCols).letter;
+
+  // --- 1. УГЛОВОЙ ШТАМП ОКУД ---
+  const stampStartCol = Math.max(1, totalCols - 2);
+  const stampStartLetter = sheet.getColumn(stampStartCol).letter;
+
+  sheet.mergeCells(`${stampStartLetter}1:${lastColLetter}1`);
+  sheet.getCell(`${stampStartLetter}1`).value = "Форма по ОКУД 0504202";
+  sheet.getCell(`${stampStartLetter}1`).font = {
+    name: "Times New Roman",
+    size: 9,
+    bold: true,
+  };
+  sheet.getCell(`${stampStartLetter}1`).alignment = { horizontal: "right" };
+
+  sheet.mergeCells(`${stampStartLetter}2:${lastColLetter}2`);
+  sheet.getCell(`${stampStartLetter}2`).value =
+    `Дата: ${date.split("-").reverse().join(".")}`;
+  sheet.getCell(`${stampStartLetter}2`).font = {
+    name: "Times New Roman",
+    size: 9,
+  };
+  sheet.getCell(`${stampStartLetter}2`).alignment = { horizontal: "right" };
+
+  // --- 2. ЗАГОЛОВОК ДОКУМЕНТА ---
+  sheet.mergeCells(`A4:${lastColLetter}4`);
+  const titleCell = sheet.getCell("A4");
+  titleCell.value = `МЕНЮ-ТРЕБОВАНИЕ НА ВЫДАЧУ ПРОДУКТОВ ПИТАНИЯ на ${date.split("-").reverse().join(".")}`;
+  titleCell.font = { name: "Times New Roman", size: 12, bold: true };
+  titleCell.alignment = { horizontal: "center" };
+
+  // --- 3. ТАБЛИЦА ДОВОЛЬСТВУЮЩИХСЯ ---
+  let currentRow = 6;
+  sheet.getCell(`A${currentRow}`).value =
+    "Количество довольствующихся по диетическим столам:";
+  sheet.getCell(`A${currentRow}`).font = {
+    name: "Times New Roman",
+    size: 10,
+    bold: true,
+  };
+  currentRow++;
+
+  const hcHeader = sheet.getRow(currentRow);
+  hcHeader.values = [
+    "Стол (диета)",
+    "Наименование",
+    "Общий, чел.",
+    "Протертый, чел.",
+    "Итого, чел.",
+  ];
+  hcHeader.font = { name: "Times New Roman", size: 9, bold: true };
+  hcHeader.eachCell((cell) => {
+    cell.border = THIN_BORDER;
+    cell.fill = {
+      type: "pattern",
+      pattern: "solid",
+      fgColor: { argb: "FFF3F4F6" },
+    };
+    cell.alignment = { horizontal: "center", vertical: "middle" };
+  });
+  currentRow++;
+
+  let totalReg = 0;
+  let totalPur = 0;
+
+  for (const d of diets) {
+    const reg =
+      headcounts.find((h) => h.diet_id === d.id && h.is_pureed === 0)
+        ?.people_count || 0;
+    const pur =
+      headcounts.find((h) => h.diet_id === d.id && h.is_pureed === 1)
+        ?.people_count || 0;
+    totalReg += reg;
+    totalPur += pur;
+
+    const r = sheet.getRow(currentRow);
+    r.values = [d.code, d.name, reg, pur, reg + pur];
+    r.font = { name: "Times New Roman", size: 9 };
+    r.eachCell((cell, colNum) => {
+      cell.border = THIN_BORDER;
+      cell.alignment = { horizontal: colNum === 2 ? "left" : "center" };
+    });
+    currentRow++;
+  }
+
+  const hcTotalRow = sheet.getRow(currentRow);
+  hcTotalRow.values = ["ИТОГО", "", totalReg, totalPur, totalReg + totalPur];
+  hcTotalRow.font = { name: "Times New Roman", size: 9, bold: true };
+  hcTotalRow.eachCell((cell, colNum) => {
+    cell.border = THIN_BORDER;
+    cell.alignment = { horizontal: colNum === 2 ? "left" : "center" };
+  });
+
+  // --- 4. ШАХМАТНАЯ ТАБЛИЦА ПРОДУКТОВ ---
+  currentRow += 2;
+  const headerRow1 = currentRow;
+  const headerRow2 = currentRow + 1;
+
+  sheet.mergeCells(`A${headerRow1}:A${headerRow2}`);
+  sheet.getCell(`A${headerRow1}`).value = "№ п/п";
+
+  sheet.mergeCells(`B${headerRow1}:C${headerRow2}`);
+  sheet.getCell(`B${headerRow1}`).value = "Наименование продукта питания";
+
+  sheet.mergeCells(`D${headerRow1}:D${headerRow2}`);
+  sheet.getCell(`D${headerRow1}`).value = "Ед. изм.";
+
+  let colCursor = 5;
+  for (const meal of mealTimes) {
+    const startLetter = sheet.getColumn(colCursor).letter;
+    const endLetter = sheet.getColumn(colCursor + diets.length - 1).letter;
+
+    if (diets.length > 1) {
+      sheet.mergeCells(`${startLetter}${headerRow1}:${endLetter}${headerRow1}`);
+    }
+    sheet.getCell(`${startLetter}${headerRow1}`).value = meal.name;
+
+    for (const diet of diets) {
+      sheet.getCell(headerRow2, colCursor).value = diet.code;
+      colCursor++;
+    }
+  }
+
+  const totalColLetter = sheet.getColumn(colCursor).letter;
+  sheet.mergeCells(
+    `${totalColLetter}${headerRow1}:${totalColLetter}${headerRow2}`,
+  );
+  sheet.getCell(`${totalColLetter}${headerRow1}`).value =
+    "Всего к выдаче (брутто)";
+
+  for (let r = headerRow1; r <= headerRow2; r++) {
+    const row = sheet.getRow(r);
+    row.height = 20;
+    for (let c = 1; c <= totalCols; c++) {
+      const cell = row.getCell(c);
+      cell.font = { name: "Times New Roman", size: 9, bold: true };
+      cell.alignment = {
+        horizontal: "center",
+        vertical: "middle",
+        wrapText: true,
+      };
+      cell.border = THIN_BORDER;
+      cell.fill = {
+        type: "pattern",
+        pattern: "solid",
+        fgColor: { argb: "FFE5E7EB" },
+      };
+    }
+  }
+
+  // --- 5. ЗАПОЛНЕНИЕ СТРОК ПРОДУКТОВ ---
+  currentRow = headerRow2 + 1;
+  matrixRows.forEach((prod, index) => {
+    const row = sheet.getRow(currentRow);
+    sheet.mergeCells(`B${currentRow}:C${currentRow}`);
+
+    row.getCell(1).value = index + 1;
+    row.getCell(2).value = prod.name;
+    row.getCell(4).value = prod.unit;
+
+    let cIdx = 5;
+    for (const meal of mealTimes) {
+      for (const diet of diets) {
+        const key = `${meal.id}_${diet.id}`;
+        const cellData = prod.cells[key];
+        const cell = row.getCell(cIdx);
+
+        if (cellData) {
+          if (prod.unit === "шт.") {
+            cell.value = cellData.pieces_label || "";
+          } else {
+            cell.value =
+              cellData.gross_kg > 0 ? Number(cellData.gross_kg.toFixed(3)) : "";
+            cell.numFmt = "0.000";
+          }
+        }
+        cIdx++;
+      }
+    }
+
+    const totalCell = row.getCell(cIdx);
+    if (prod.unit === "шт.") {
+      totalCell.value = prod.pieces_label;
+    } else {
+      totalCell.value = Number(prod.gross_kg.toFixed(3));
+      totalCell.numFmt = "0.000";
+    }
+    totalCell.font = { name: "Times New Roman", size: 9, bold: true };
+
+    for (let c = 1; c <= totalCols; c++) {
+      const cell = row.getCell(c);
+      if (c !== totalCols) cell.font = { name: "Times New Roman", size: 9 };
+      cell.border = THIN_BORDER;
+      cell.alignment = {
+        horizontal: c === 2 ? "left" : c === 1 || c === 4 ? "center" : "right",
+        vertical: "middle",
+      };
+    }
+    currentRow++;
+  });
+
+  // --- 6. БЛОК ПОДПИСЕЙ ---
+  currentRow += 2;
+  const signatures = [
+    "Руководитель учреждения: ___________________ / ___________________ /",
+    "Врач-диетолог (диетсестра): ___________________ / ___________________ /",
+    "Заведующий производством: ___________________ / ___________________ /",
+    "Продукты выдал (кладовщик): ___________________ / ___________________ /",
+  ];
+
+  for (const line of signatures) {
+    sheet.getCell(`B${currentRow}`).value = line;
+    sheet.getCell(`B${currentRow}`).font = { name: "Times New Roman", size: 9 };
+    currentRow += 2;
+  }
+
+  // Ширина колонок
+  sheet.getColumn(1).width = 6;
+  sheet.getColumn(2).width = 22;
+  sheet.getColumn(3).width = 16;
+  sheet.getColumn(4).width = 8;
+  for (let c = 5; c < totalCols; c++) {
+    sheet.getColumn(c).width = 8.5;
+  }
+  sheet.getColumn(totalCols).width = 15;
+
+  return workbook;
+}

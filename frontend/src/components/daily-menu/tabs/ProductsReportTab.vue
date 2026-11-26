@@ -1,10 +1,16 @@
 <script setup>
-defineProps({
+import { Button } from 'primevue';
+
+const props = defineProps({
     products: { type: Array, default: () => [] },
     date: { type: String, required: true },
     day: { type: Number, required: true },
     totalPeople: { type: Number, default: 0 }
 })
+
+function downloadExcel0504202() {
+    window.location.href = `/api/daily-menus/${props.date}/export-0504202`
+}
 </script>
 
 <template>
@@ -12,14 +18,28 @@ defineProps({
         id="print-area"
         class="p-6"
     >
-        <div class="mb-4 pb-3 border-b border-[#2b394e] print-header">
+
+
+
+        <div class="mb-4 pb-3 flex flex-col border-b border-[#2b394e] print-header">
             <h2 class="text-base font-bold text-white print-title">
                 Сводная продуктовая ведомость (Меню-требование) на {{ date }}
             </h2>
             <p class="text-xs text-[#8a99ad] print-text mt-1">
                 Всего питающихся: {{ totalPeople }} чел. (День цикла №{{ day }})
             </p>
+
+            <Button
+                label="Скачать ОКУД 0504202 (.xlsx)"
+                icon="pi pi-print"
+                class="xui-btn xui-btn-teal w-fit self-end !py-1.5 !text-xs no-print"
+                @click="downloadExcel0504202"
+            />
         </div>
+
+
+
+
 
         <table class="w-full border-collapse text-xs print-border">
             <thead>
