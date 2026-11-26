@@ -1,17 +1,17 @@
 <script setup>
 import { ref } from 'vue'
-import RecipesCatalog from './components/RecipesCatalog.vue'
+// import RecipesCatalog from './components/RecipesCatalog.vue'
 // import TemplateBuilder from './components/TemplateBuilder.vue'
-import DailyMenuManager from './components/DailyMenuManager.vue'
+// import DailyMenuManager from './components/DailyMenuManager.vue'
 import MenuBuilderPage from './components/menu-builder/MenuBuilderPage.vue';
 import RecipesPage from './components/recipes/RecipesPage.vue';
+import DailyMenuPage from './components/daily-menu/DailyMenuPage.vue';
 
 const activeTab = ref('catalog') // 'catalog' | 'templates' | 'daily'
 </script>
 
 <template>
   <div class="min-h-screen bg-[#151e29] text-[#e2e8f0] font-sans antialiased">
-    <!-- Единая навигационная панель -->
     <header class="bg-[#182130] border-b border-[#2b394e] sticky top-0 z-30 no-print">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
         <div class="flex items-center gap-2.5">
@@ -67,7 +67,7 @@ const activeTab = ref('catalog') // 'catalog' | 'templates' | 'daily'
       <!-- <TemplateBuilder v-else-if="activeTab === 'templates'" /> -->
       <RecipesPage v-if="activeTab === 'catalog'" />
       <MenuBuilderPage v-else-if="activeTab === 'templates'" />
-      <DailyMenuManager v-else-if="activeTab === 'daily'" />
+      <DailyMenuPage v-else-if="activeTab === 'daily'" />
 
     </main>
   </div>

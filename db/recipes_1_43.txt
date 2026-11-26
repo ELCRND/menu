@@ -297,7 +297,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 2,
+                            "alternative_group": 200,
                             "name": "Масса отварных мясопродуктов",
                             "gross_weight": "-",
                             "net_weight": 40,
@@ -359,7 +359,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 1,
+                            "alternative_group": 100,
                             "name": "Масса отварных мясопродуктов",
                             "gross_weight": "-",
                             "net_weight": 30,
@@ -421,7 +421,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 1,
+                            "alternative_group": 100,
                             "name": "Масса отварных мясопродуктов",
                             "gross_weight": "-",
                             "net_weight": 20,
@@ -499,7 +499,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 1,
+                            "alternative_group": 100,
                             "name": "Масса жареных мясопродуктов",
                             "gross_weight": "-",
                             "net_weight": 40,
@@ -568,7 +568,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 1,
+                            "alternative_group": 100,
                             "name": "Масса жареных мясопродуктов",
                             "gross_weight": "-",
                             "net_weight": 30,
@@ -637,7 +637,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 1,
+                            "alternative_group": 100,
                             "name": "Масса жареных мясопродуктов",
                             "gross_weight": "-",
                             "net_weight": 20,
@@ -1780,7 +1780,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 2,
+                            "alternative_group": 200,
                             "name": "Масса отварной свежей рыбы",
                             "gross_weight": "-",
                             "net_weight": 10,
@@ -1844,7 +1844,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 2,
+                            "alternative_group": 200,
                             "name": "Масса отварных мясных продуктов",
                             "gross_weight": "-",
                             "net_weight": 30,
@@ -1879,7 +1879,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 3,
+                            "alternative_group": 300,
                             "name": "Масса жареных мясных продуктов",
                             "gross_weight": "-",
                             "net_weight": 30,
@@ -1969,7 +1969,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 1,
+                            "alternative_group": 100,
                             "name": "Масса отварных мясных продуктов",
                             "gross_weight": "-",
                             "net_weight": 20,
@@ -2004,7 +2004,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 2,
+                            "alternative_group": 200,
                             "name": "Масса жареных мясных продуктов",
                             "gross_weight": "-",
                             "net_weight": 20,
@@ -2570,7 +2570,7 @@
                             "is_subtotal": false
                         },
                         {
-                            "alternative_group": 5,
+                            "alternative_group": 500,
                             "name": "Масса отварного осетра",
                             "gross_weight": "-",
                             "net_weight": 15,
