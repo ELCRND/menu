@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import RecipesCatalog from './components/RecipesCatalog.vue'
-import TemplateBuilder from './components/TemplateBuilder.vue'
+// import TemplateBuilder from './components/TemplateBuilder.vue'
 import DailyMenuManager from './components/DailyMenuManager.vue'
+import MenuBuilderPage from './components/menu-builder/MenuBuilderPage.vue';
+import RecipesPage from './components/recipes/RecipesPage.vue';
 
-const activeTab = ref('templates') // 'catalog' | 'templates' | 'daily'
+const activeTab = ref('catalog') // 'catalog' | 'templates' | 'daily'
 </script>
 
 <template>
@@ -61,8 +63,10 @@ const activeTab = ref('templates') // 'catalog' | 'templates' | 'daily'
 
     <!-- Контент активной вкладки -->
     <main>
-      <RecipesCatalog v-if="activeTab === 'catalog'" />
-      <TemplateBuilder v-else-if="activeTab === 'templates'" />
+      <!-- <RecipesCatalog v-if="activeTab === 'catalog'" /> -->
+      <!-- <TemplateBuilder v-else-if="activeTab === 'templates'" /> -->
+      <RecipesPage v-if="activeTab === 'catalog'" />
+      <MenuBuilderPage v-else-if="activeTab === 'templates'" />
       <DailyMenuManager v-else-if="activeTab === 'daily'" />
 
     </main>

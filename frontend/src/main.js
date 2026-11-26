@@ -3,6 +3,8 @@ import PrimeVue from "primevue/config";
 import Aura from "@primeuix/themes/aura";
 import "primeicons/primeicons.css";
 import "./style.css";
+import "./assets/xui-theme.css";
+import ConfirmationService from "primevue/confirmationservice";
 
 // import { createPinia } from 'pinia'
 
@@ -17,6 +19,8 @@ app.use(PrimeVue, {
     preset: Aura,
   },
 });
+
+app.use(ConfirmationService);
 
 // app.use(createPinia())
 app.use(router);

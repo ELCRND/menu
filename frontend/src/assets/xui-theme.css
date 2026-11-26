@@ -1,0 +1,217 @@
+/* Инпуты и селекты в палитре 3x-ui */
+.xui-input.p-inputtext,
+.xui-select.p-select {
+    background-color: #151e29 !important;
+    border: 1px solid #2b394e !important;
+    color: #e2e8f0 !important;
+    border-radius: 8px !important;
+    font-size: 0.8125rem !important;
+    transition: all 0.2s !important;
+}
+
+.xui-input.p-inputtext::placeholder {
+    color: #64748b !important;
+}
+
+.xui-input.p-inputtext:hover,
+.xui-select.p-select:hover {
+    border-color: #10a37f !important;
+}
+
+.xui-input.p-inputtext:focus,
+.xui-select.p-select.p-focus {
+    border-color: #10a37f !important;
+    box-shadow: 0 0 0 2px rgba(16, 163, 127, 0.22) !important;
+}
+
+/* Кнопки с выраженным фоном */
+.xui-btn.p-button {
+    border-radius: 8px !important;
+    font-size: 0.8125rem !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 0.95rem !important;
+    transition: all 0.2s !important;
+}
+
+.xui-btn-teal.p-button {
+    background-color: #10a37f !important;
+    border: 1px solid #13b890 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(16, 163, 127, 0.25) !important;
+}
+
+.xui-btn-teal.p-button:hover {
+    background-color: #13b890 !important;
+    border-color: #34d399 !important;
+}
+
+.xui-btn-slate.p-button {
+    background-color: #222e42 !important;
+    border: 1px solid #364761 !important;
+    color: #e2e8f0 !important;
+}
+
+.xui-btn-slate.p-button:hover {
+    background-color: #2b394e !important;
+    border-color: #10a37f !important;
+    color: #13b890 !important;
+}
+
+.xui-btn-danger.p-button {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    border: 1px solid rgba(239, 68, 68, 0.4) !important;
+    color: #f87171 !important;
+}
+
+.xui-btn-danger.p-button:hover {
+    background-color: rgba(239, 68, 68, 0.25) !important;
+    border-color: #ef4444 !important;
+}
+
+/* Выпадающая панель Select */
+.p-select-overlay {
+    background-color: #1c2636 !important;
+    border: 1px solid #2b394e !important;
+    color: #e2e8f0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45) !important;
+}
+
+.p-select-option {
+    color: #cbd5e1 !important;
+    font-size: 0.8125rem !important;
+}
+
+.p-select-option:hover,
+.p-select-option.p-focus {
+    background-color: #222e42 !important;
+    color: #ffffff !important;
+}
+
+.p-select-option.p-select-option-selected {
+    background-color: rgba(16, 163, 127, 0.2) !important;
+    color: #13b890 !important;
+}
+
+/* Адаптация под печать (строгий белый лист) */
+@media print {
+    @page {
+        size: A4 portrait;
+        /* margin: 12mm; */
+    }
+
+    * {
+        box-shadow: none;
+    }
+
+    html,
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        height: auto !important;
+        overflow: visible !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Скрываем основной интерфейс и лишние элементы */
+    .no-print,
+    .p-toast,
+    .p-select-overlay {
+        display: none !important;
+    }
+
+    /* Сбрасываем flex-центрирование и скролл модального окна PrimeVue */
+    .p-dialog-mask {
+        position: static !important;
+        display: block !important;
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .xui-dialog.p-dialog {
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        max-height: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        transform: none !important;
+    }
+
+    .xui-dialog .p-dialog-content {
+        background: #ffffff !important;
+        border: none !important;
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    /* Область печати в нормальном потоке документа */
+    #print-area {
+        position: static !important;
+        width: 100% !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .print-header {
+        background: #ffffff !important;
+        border-bottom: 2px solid #000000 !important;
+        padding: 0 0 10px 0 !important;
+        margin: 12px !important;
+    }
+
+    .print-title,
+    .print-text {
+        color: #000000 !important;
+    }
+
+    .print-tag {
+        background: transparent !important;
+        border: none !important;
+        color: #000000 !important;
+        padding: 0 !important;
+    }
+
+    /* Запрещаем разрыв таблиц и текстовых блоков посередине */
+    table {
+        page-break-inside: auto !important;
+        break-inside: auto !important;
+    }
+
+    tr,
+    .print-box {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+    }
+
+    thead {
+        display: table-header-group !important;
+    }
+
+    .print-border {
+        border-color: #1f2937 !important;
+        border-radius: 0 !important;
+    }
+
+    .print-th {
+        background: #f3f4f6 !important;
+        color: #000000 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .print-box {
+        background: #ffffff !important;
+        border: 1px solid #9ca3af !important;
+        border-radius: 4px !important;
+        padding: 10px !important;
+    }
+}
