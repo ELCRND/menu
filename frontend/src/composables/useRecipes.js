@@ -19,7 +19,7 @@ export function useRecipes() {
   });
 
   const filteredRecipes = computed(() => {
-    const q = search.value.toLowerCase().trim();
+    const q = search.value.toLowerCase().replace("ё", "е").trim();
 
     return recipes.value.filter((r) => {
       if (onlyFavorites.value && !r.is_favorite) return false;
@@ -27,12 +27,26 @@ export function useRecipes() {
         return false;
       if (!q) return true;
 
-      const inTitle = r.title.toLowerCase().includes(q);
-      const inNum = String(r.recipe_number) === q;
+      // 1. Поиск по коду ТТК ("158.1") или базовому номеру ("158")
+      const ttkCode = String(r.ttk_code || "").toLowerCase();
+      const baseNum = String(r.base_recipe_number || "");
+      const inNum =
+        ttkCode === q || ttkCode.startsWith(`${q}.`) || baseNum === q;
+
+      // 2. Поиск по названию блюда (с нормализацией ё -> е)
+      const inTitle = (r.title || "")
+        .toLowerCase()
+        .replace("ё", "е")
+        .includes(q);
+
+      // 3. Поиск по составу (ингредиентам)
       const inIng = r.variants?.some((v) =>
-        v.ingredients?.some((i) => i.name.toLowerCase().includes(q)),
+        v.ingredients?.some((i) =>
+          (i.name || "").toLowerCase().replace("ё", "е").includes(q),
+        ),
       );
-      return inTitle || inNum || inIng;
+
+      return inNum || inTitle || inIng;
     });
   });
 
@@ -43,7 +57,9 @@ export function useRecipes() {
   }
 
   async function toggleFavorite(recipe) {
-    const res = await fetch(`/api/favorites/${recipe.id}`, { method: "POST" });
+    const res = await fetch(`/api/recipes/favorites/${recipe.id}`, {
+      method: "POST",
+    });
     if (!res.ok) return;
     const data = await res.json();
     recipe.is_favorite = data.is_favorite;

@@ -25,7 +25,7 @@ const emit = defineEmits(['select', 'toggle-favorite'])
                     <span
                         class="px-2.5 py-0.5 rounded-full bg-[#151e29]/90 backdrop-blur-sm border border-[#13b890]/45 text-[#13b890] font-mono text-[14px] font-semibold"
                     >
-                        № {{ recipe.recipe_number }}
+                        № {{ recipe.ttk_code }}
                     </span>
                 </div>
 
@@ -55,10 +55,16 @@ const emit = defineEmits(['select', 'toggle-favorite'])
                         {{ recipe.section }}
                     </span>
                     <span
-                        v-if="recipe.variants?.[0]?.output_weight"
+                        v-if="recipe.variants?.length"
                         class="px-2 py-0.5 rounded-full text-[11px] font-mono bg-[#6366f1]/10 text-[#6366f1] border border-[#6366f1]/40"
                     >
-                        Выход: {{ recipe.variants[0].output_weight }} г
+                        Выход: {{ recipe.variants[recipe.variants.length - 1]?.output_weight }} г
+                    </span>
+                    <span
+                        v-if="recipe.nutrition?.[0]?.calories"
+                        class="px-2 py-0.5 rounded-full text-[11px] font-mono bg-[#f59e0b]/10 text-[#fbbf24] border border-[#f59e0b]/35"
+                    >
+                        {{ recipe.nutrition[0].calories }} ккал
                     </span>
                 </div>
 

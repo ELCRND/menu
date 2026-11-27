@@ -1,33 +1,23 @@
-import { DatabaseSync } from "node:sqlite";
+import pg from "pg";
 
-const db = new DatabaseSync("recipes.db");
+const { Pool } = pg;
 
-// Включаем WAL-режим для защиты от повреждения файла и внешние ключи для каскадного удаления
-db.exec("PRAGMA journal_mode = WAL;");
-db.exec("PRAGMA foreign_keys = ON;");
+const pool = new Pool({
+  user: process.env.DB_USER || "ttk_user",
+  host: process.env.DB_HOST || "localhost",
+  database: process.env.DB_NAME || "ttk_db",
+  password: process.env.DB_PASSWORD || "0042",
+  port: Number(process.env.DB_PORT) || 5432,
+  // Настройки пула для стабильной работы
+  max: 20, // Максимум одновременных подключений
+  idleTimeoutMillis: 30000, // Закрывать неактивные соединения через 30 сек
+  connectionTimeoutMillis: 2000, // Таймаут ожидания подключения 2 сек
+});
 
-// Таблица для избранного
-db.exec("CREATE TABLE IF NOT EXISTS favorites (recipe_id INTEGER PRIMARY KEY)");
+// Проверка подключения при старте сервера
+pool.on("error", (err) => {
+  console.error("Неожиданная ошибка на неактивном клиенте PostgreSQL:", err);
+  process.exit(-1);
+});
 
-// Добавляем колонку sort_order в menu_template_items, если её еще нет
-const cols = db.prepare("PRAGMA table_info(menu_template_items)").all();
-if (!cols.some((c) => c.name === "sort_order")) {
-  db.exec(
-    "ALTER TABLE menu_template_items ADD COLUMN sort_order INTEGER DEFAULT 0;",
-  );
-  db.exec("UPDATE menu_template_items SET sort_order = id;");
-}
-
-// Очищаем «зависшие» позиции дневного меню и шаблонов, у которых удалена родительская запись
-db.exec(`
-  DELETE FROM daily_menu_items 
-  WHERE daily_menu_id NOT IN (SELECT id FROM daily_menus);
-
-  DELETE FROM daily_headcount 
-  WHERE daily_menu_id NOT IN (SELECT id FROM daily_menus);
-
-  DELETE FROM menu_template_items 
-  WHERE template_id NOT IN (SELECT id FROM menu_templates);
-`);
-
-export default db;
+export default pool;

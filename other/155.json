@@ -1,0 +1,302 @@
+{
+    "recipe_number": 155,
+    "section": "Блюда из мяса, мясных гастрономических продуктов",
+    "title": "Мясо, птица, кролик или дичь жареные с гарниром",
+    "footnotes": null,
+    "technology": "Мясо, птицу, дичь и кролика жарят, охлаждают, мясо нарезают поперек волокон тонкими ломтиками, птицу, кролика и дичь нарубают по два куска на порцию. Отпускают с гарниром (к птице, кролику и дичи кроме свежих, соленых, маринованных овощей и грибов можно подать маринованные плоды и зеленый салат) и соусом (к мясу кроме майонеза и его производных подают еще и соус-хрен).",
+    "quality_requirements": "Внешний вид – мясо нарезано кусочками, рядом расположен гарнир и подлит соус.\nВкус и запах – приятные, вкус в меру соленый, свойственные жареному мясу.\nЦвет – светло-желтый.\nКонсистенция мяса – мягкая, плотная, сочная.",
+    "variants": [
+        {
+            "category": "I, II",
+            "output_weight": "175 / 200",
+            "ingredients": [
+                {
+                    "alternative_group": 1,
+                    "name": "Говядина",
+                    "gross_weight": "156",
+                    "net_weight": 115,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Свинина",
+                    "gross_weight": "129",
+                    "net_weight": 110,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Баранина",
+                    "gross_weight": "166",
+                    "net_weight": 119,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Телятина",
+                    "gross_weight": "180",
+                    "net_weight": 119,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 2,
+                    "name": "Жир животный топленый пищевой",
+                    "gross_weight": "3",
+                    "net_weight": 3,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Масса жареных мясных продуктов",
+                    "gross_weight": "-",
+                    "net_weight": 75,
+                    "is_subtotal": true
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Курица",
+                    "gross_weight": "216",
+                    "net_weight": 149,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Цыпленок",
+                    "gross_weight": "213",
+                    "net_weight": 149,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Индейка",
+                    "gross_weight": "192",
+                    "net_weight": 141,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Гусь",
+                    "gross_weight": "261",
+                    "net_weight": 172,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Кролик",
+                    "gross_weight": "143",
+                    "net_weight": 136,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Тетерев (в шт.)",
+                    "gross_weight": "1/4",
+                    "net_weight": 0.25,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Рябчик или куропатка серая (шт.)",
+                    "gross_weight": "2/3",
+                    "net_weight": 0.67,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Фазан (шт.)",
+                    "gross_weight": "1/4",
+                    "net_weight": 0.25,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 3,
+                    "name": "Маргарин столовый",
+                    "gross_weight": "5",
+                    "net_weight": 5,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Масса жареной птицы или дичи, или кролика",
+                    "gross_weight": "-",
+                    "net_weight": 100,
+                    "is_subtotal": true
+                },
+                {
+                    "alternative_group": 4,
+                    "name": "Гарнир №546, 548, 554",
+                    "gross_weight": "-",
+                    "net_weight": 75,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 5,
+                    "name": "Соус №603, 605, 608",
+                    "gross_weight": "-",
+                    "net_weight": 25,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 100,
+                    "name": "Выход из говядины, или свинины, или баранины, или телятины",
+                    "gross_weight": "-",
+                    "net_weight": 175,
+                    "is_subtotal": true
+                },
+                {
+                    "alternative_group": 100,
+                    "name": "Выход из птицы, или кролика, или дичи",
+                    "gross_weight": "-",
+                    "net_weight": 200,
+                    "is_subtotal": true
+                }
+            ]
+        },
+        {
+            "category": "III",
+            "output_weight": "120 / 145",
+            "ingredients": [
+                {
+                    "alternative_group": 1,
+                    "name": "Говядина",
+                    "gross_weight": "105",
+                    "net_weight": 77,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Свинина",
+                    "gross_weight": "87",
+                    "net_weight": 74,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Баранина",
+                    "gross_weight": "110",
+                    "net_weight": 79,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Телятина",
+                    "gross_weight": "120",
+                    "net_weight": 79,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 2,
+                    "name": "Жир животный топленый пищевой",
+                    "gross_weight": "3",
+                    "net_weight": 2,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Масса жареных мясных продуктов",
+                    "gross_weight": "-",
+                    "net_weight": 50,
+                    "is_subtotal": true
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Курица",
+                    "gross_weight": "163",
+                    "net_weight": 112,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Цыпленок",
+                    "gross_weight": "160",
+                    "net_weight": 112,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Индейка",
+                    "gross_weight": "144",
+                    "net_weight": 106,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Гусь",
+                    "gross_weight": "195",
+                    "net_weight": 129,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Кролик",
+                    "gross_weight": "107",
+                    "net_weight": 102,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Тетерев (в шт.)",
+                    "gross_weight": "1/6",
+                    "net_weight": 0.17,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Рябчик или куропатка серая (шт.)",
+                    "gross_weight": "1/2",
+                    "net_weight": 0.5,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Фазан (шт.)",
+                    "gross_weight": "1/5",
+                    "net_weight": 0.2,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 3,
+                    "name": "Маргарин столовый",
+                    "gross_weight": "4",
+                    "net_weight": 4,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 1,
+                    "name": "Масса жареной птицы или дичи, или кролика",
+                    "gross_weight": "-",
+                    "net_weight": 75,
+                    "is_subtotal": true
+                },
+                {
+                    "alternative_group": 4,
+                    "name": "Гарнир №546, 548, 554",
+                    "gross_weight": "-",
+                    "net_weight": 50,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 5,
+                    "name": "Соус №603, 605, 608",
+                    "gross_weight": "-",
+                    "net_weight": 20,
+                    "is_subtotal": false
+                },
+                {
+                    "alternative_group": 100,
+                    "name": "Выход из говядины, или свинины, или баранины, или телятины",
+                    "gross_weight": "-",
+                    "net_weight": 120,
+                    "is_subtotal": true
+                },
+                {
+                    "alternative_group": 100,
+                    "name": "Выход из птицы, или кролика, или дичи",
+                    "gross_weight": "-",
+                    "net_weight": 145,
+                    "is_subtotal": true
+                }
+            ]
+        }
+    ]
+}

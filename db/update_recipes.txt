@@ -1,5 +1,6 @@
 import glob
 import json
+import os
 import shutil
 import sqlite3
 
@@ -7,10 +8,56 @@ DB_NAME = "recipes.db"
 BACKUP_NAME = "recipes_before_update.db"
 
 
+def ensure_schema(cursor):
+    """Создает таблицы при первом запуске и добавляет колонку footnotes в существующую БД."""
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS recipes (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            recipe_number INTEGER UNIQUE,
+            section TEXT,
+            title TEXT NOT NULL,
+            footnotes TEXT,
+            technology TEXT,
+            quality_requirements TEXT
+        );
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS recipe_variants (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            recipe_id INTEGER NOT NULL,
+            category TEXT NOT NULL,
+            output_weight TEXT,
+            FOREIGN KEY (recipe_id) REFERENCES recipes(id) ON DELETE CASCADE
+        );
+    """)
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS ingredients (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            variant_id INTEGER NOT NULL,
+            alternative_group INTEGER NOT NULL,
+            name TEXT NOT NULL,
+            gross_weight TEXT,
+            net_weight REAL,
+            is_subtotal INTEGER DEFAULT 0,
+            FOREIGN KEY (variant_id) REFERENCES recipe_variants(id) ON DELETE CASCADE
+        );
+    """)
+
+    # Проверяем наличие колонки footnotes в старой таблице recipes
+    cursor.execute("PRAGMA table_info(recipes)")
+    columns = [col[1] for col in cursor.fetchall()]
+    if "footnotes" not in columns:
+        cursor.execute("ALTER TABLE recipes ADD COLUMN footnotes TEXT")
+        print("В таблицу recipes добавлена новая колонка: footnotes")
+
+
 def sync_recipe(recipe, cursor):
     """Добавляет новый рецепт или обновляет существующий, сохраняя ID."""
     num = recipe.get("recipe_number")
     title = recipe.get("title")
+    footnotes = recipe.get("footnotes")
 
     cursor.execute("SELECT id FROM recipes WHERE recipe_number = ?", (num,))
     row = cursor.fetchone()
@@ -20,12 +67,13 @@ def sync_recipe(recipe, cursor):
         cursor.execute(
             """
             UPDATE recipes
-            SET section = ?, title = ?, technology = ?, quality_requirements = ?
+            SET section = ?, title = ?, footnotes = ?, technology = ?, quality_requirements = ?
             WHERE id = ?
             """,
             (
                 recipe.get("section"),
                 title,
+                footnotes,
                 recipe.get("technology"),
                 recipe.get("quality_requirements"),
                 recipe_id,
@@ -35,13 +83,14 @@ def sync_recipe(recipe, cursor):
     else:
         cursor.execute(
             """
-            INSERT INTO recipes (recipe_number, section, title, technology, quality_requirements)
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO recipes (recipe_number, section, title, footnotes, technology, quality_requirements)
+            VALUES (?, ?, ?, ?, ?, ?)
             """,
             (
                 num,
                 recipe.get("section"),
                 title,
+                footnotes,
                 recipe.get("technology"),
                 recipe.get("quality_requirements"),
             ),
@@ -49,12 +98,12 @@ def sync_recipe(recipe, cursor):
         recipe_id = cursor.lastrowid
         action = "Добавлен"
 
-    # Собираем категории из JSON, чтобы удалить устаревшие колонки, если они исчезли
     incoming_categories = set()
 
     for variant in recipe.get("variants", []):
         cat = variant.get("category")
-        out_weight = variant.get("output_weight")
+        raw_out = variant.get("output_weight")
+        out_weight = str(raw_out) if raw_out is not None else None
         incoming_categories.add(cat)
 
         cursor.execute(
@@ -69,7 +118,6 @@ def sync_recipe(recipe, cursor):
                 "UPDATE recipe_variants SET output_weight = ? WHERE id = ?",
                 (out_weight, variant_id),
             )
-            # Очищаем старый состав ингредиентов только для этой колонки
             cursor.execute("DELETE FROM ingredients WHERE variant_id = ?", (variant_id,))
         else:
             cursor.execute(
@@ -78,7 +126,6 @@ def sync_recipe(recipe, cursor):
             )
             variant_id = cursor.lastrowid
 
-        # Записываем актуальные ингредиенты из JSON
         for ing in variant.get("ingredients", []):
             cursor.execute(
                 """
@@ -97,17 +144,27 @@ def sync_recipe(recipe, cursor):
                 ),
             )
 
+    # Удаляем устаревшие колонки категорий, если они исчезли после повторного парсинга
+    if incoming_categories:
+        placeholders = ",".join("?" for _ in incoming_categories)
+        cursor.execute(
+            f"DELETE FROM recipe_variants WHERE recipe_id = ? AND category NOT IN ({placeholders})",
+            [recipe_id, *incoming_categories],
+        )
+
     print(f"  -> {action}: Рецепт №{num} — {title}")
 
 
 def main():
-    # Обязательно делаем резервную копию перед обновлением
-    shutil.copyfile(DB_NAME, BACKUP_NAME)
-    print(f"Создана резервная копия: {BACKUP_NAME}\n")
+    if os.path.exists(DB_NAME):
+        shutil.copyfile(DB_NAME, BACKUP_NAME)
+        print(f"Создана резервная копия: {BACKUP_NAME}\n")
 
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("PRAGMA foreign_keys = ON;")
+
+    ensure_schema(cursor)
 
     json_files = sorted(glob.glob("*.json"))
     if not json_files:
